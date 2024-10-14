@@ -1,0 +1,359 @@
+/* box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.3); */
+/* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); */
+/* setTimeout(() => {debugger}, 3000) */
+
+/* box-shadow: 0px 0px 6px 0px rgba(50, 50, 93, 0.1), 1px 1px 5px rgba(0, 0, 0, 0.02); */
+
+/* Reset css */
+
+.translate--y {
+    transition: all 0.3s;
+}
+
+.translate--y:hover {
+    /* background-color: rgb(226, 203, 166); */
+    transform: translateY(-3px);
+}
+
+.hover--border {
+    transition: all 0.3s;
+}
+
+.hover--border:hover {
+    border: 1px solid red;
+}
+
+.hover--box-shadow {
+    transition: all 0.3s;
+}
+
+.hover--box-shadow:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Thanh cuộn tổng quát */
+::-webkit-scrollbar {
+    width: 10px; /* Chiều rộng thanh cuộn */
+    height: 10px; /* Chiều cao thanh cuộn ngang */
+}
+
+/* Phần nền của thanh cuộn */
+/* Màu nền thanh cuộn */
+::-webkit-scrollbar-track {
+    /* background: #f1f1f1; */
+}
+
+/* Thanh cuộn */
+::-webkit-scrollbar-thumb {
+    background-color: rgb(136, 136, 136); /* Màu của thanh cuộn */
+    border-radius: 10px; /* Bo góc thanh cuộn */
+    border: 2px solid #f1f1f1; /* Viền của thanh cuộn */
+}
+
+/* Khi người dùng rê chuột vào thanh cuộn */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Màu thanh cuộn khi hover */
+}
+
+/* Stick header */
+/* background: linear-gradient(to right, #8ce09d, #fff5c3) !important; */
+/* background: linear-gradient(to right, #deb8e6, #9ce9ad) !important; */
+.sticky {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    z-index: 9995;
+    animation: slideIndown 0.3s linear;
+}
+@keyframes slideIndown {
+    0% {
+        transform: translate3d(0, -100%, 0);
+        visibility: visible;
+    }
+
+    100% {
+        transform: translate3d(0, 0%, 0);
+    }
+}
+
+/* customer pagination */
+.page-link {
+    border-radius: 50% !important;
+    margin-left: 5px !important;
+    padding: 1px 8px;
+    color: #888;
+}
+
+.page-link:focus {
+    color: black;
+    background-color: rgb(255, 219, 0);
+}
+
+/* custom slick */
+.slick-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 999;
+    background-color: rgb(179, 165, 165);
+    text-align: center;
+    width: 43px;
+    height: 43px;
+    font-size: 13px;
+    color: black;
+    border: none;
+}
+
+.slick-prev {
+    left: 10px;
+}
+
+.slick-next {
+    right: 10px;
+}
+.slick-arrow.slick-prev::after {
+    position: absolute;
+    top: -1px;
+    left: 100%;
+    content: '';
+    border-bottom: 44px solid rgb(179, 165, 165);
+    border-right: 10px solid transparent;
+    display: block;
+    width: 10px;
+    z-index: -1;
+}
+
+.slick-arrow.slick-next::after {
+    position: absolute;
+    top: -1px;
+    right: 100%;
+    content: '';
+    border-bottom: 44px solid rgb(179, 165, 165);
+    border-left: 10px solid transparent;
+    display: block;
+    width: 10px;
+    z-index: -1;
+}
+
+/* Tùy chỉnh toàn bộ khu vực dots */
+.slick-dots {
+    position: absolute;
+    bottom: 10px; /* Điều chỉnh khoảng cách từ đáy của slider */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Tùy chỉnh từng dot */
+.slick-dots li {
+    margin: 0 5px;
+}
+
+/* Tùy chỉnh nút dot */
+.slick-dots li button {
+    width: 20px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: #ccc;
+    border: none;
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu khi hover hoặc active */
+}
+
+/* Tùy chỉnh khi hover vào dot */
+.slick-dots li button:hover {
+    background-color: #888;
+}
+
+/* Tùy chỉnh dot đang active */
+.slick-dots li.slick-active button {
+    background-color: red;
+}
+
+.slick-dots li button {
+    font-size: 0; /* Ẩn văn bản */
+}
+
+/* Header */
+
+/* Product */
+.module-product__title-wrap {
+    text-align: center;
+}
+
+.module-product__title {
+    position: relative;
+    margin-bottom: 15px;
+}
+.module-product__title::before,
+.module-product__title::after {
+    content: '';
+    position: absolute;
+    /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 100%); */
+    background-color: black;
+    z-index: -1;
+    width: 100px;
+    height: 2px;
+}
+
+.module-product__title::before {
+    top: 50%;
+    left: 28%;
+}
+.module-product__title::after {
+    top: 50%;
+    right: 28%;
+}
+
+.product-list {
+}
+
+.product-item {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgb(136, 136, 136, 0.2);
+    border-radius: 5px;
+    padding: 7px;
+    overflow: hidden;
+}
+
+.product-item__img-wrap {
+    position: relative;
+    display: block;
+    height: 100% !important;
+    width: 100% !important;
+    border-radius: 5px;
+}
+
+.product-item__transition {
+    display: block;
+    overflow: hidden;
+}
+
+.product-item__img-thumbnail {
+    height: auto;
+    border-radius: 5px;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto !important;
+    object-fit: contain;
+    margin: auto;
+    transition: all 0.5s;
+}
+
+/* .product-item__img-wrap {
+    position: relative;
+    width: 100%;
+}
+.product-item__transition {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding-top: 75%;
+}
+
+.product-item__img-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-image: url('https://bizweb.dktcdn.net/thumb/large/100/445/219/products/s1.jpg?v=1640590559330');
+} */
+
+.product-item__sale-label {
+}
+
+.product-item__action {
+    top: 0;
+    right: -100px;
+    right: 2%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 8px 0;
+    transition: all 0.2s ease-in;
+    height: 100%;
+}
+
+.product-item__action-item-icon {
+    display: block;
+    padding: 5px;
+    width: 35px;
+    height: 35px;
+    line-height: 25px;
+    text-align: center;
+    font-size: 23px;
+}
+
+.product-item__action-item:hover.product-item__action-item i {
+    font-size: 25px;
+}
+
+/* .product-item:hover .product-item__action {
+    right: 4%;
+} */
+
+.product-item__info {
+    margin-top: 10px;
+}
+.product-item__name,
+.product-item__sum {
+    margin-bottom: 8px;
+    text-align: left;
+    line-height: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    white-space: unset;
+    font-size: 16px;
+}
+
+.product-item__sum {
+    font-size: 14px;
+    color: #888;
+}
+
+.product-item__price,
+.product-item__discount {
+    color: red;
+}
+
+.product-item__price {
+    font-size: 16px;
+    font-weight: bold;
+}
+.product-item__discount {
+    margin-left: 5px;
+    font-size: 14px;
+}
+.product-item__old-price {
+    font-size: 16px;
+    color: #888;
+    font-weight: bold;
+    text-decoration: line-through;
+    margin-left: 20px;
+}
+
+/* Footer */
