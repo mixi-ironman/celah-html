@@ -376,7 +376,7 @@ $(document).ready(function () {
             currentValue = 1;
         }
 
-        input.val(currentValue + 1); // Tăng giá trị lên 1
+        input.val(currentValue + 1);
     });
 
     // Khi bấm vào nút giảm
@@ -411,4 +411,52 @@ $(document).ready(function () {
             input.val(1);
         }
     });
+
+    $(function () {
+        $('#slider').slider({
+            value: 50, // giá trị ban đầu
+            min: 0,
+            max: 100,
+            slide: function (event, ui) {
+                $('#slider-value').text(ui.value); // Cập nhật giá trị
+            },
+        });
+    });
+
+    // $(document).ready(function () {
+    $('.slick-tags').slick({
+        slidesToShow: 4,
+        slidesToScroll: 2,
+        infinite: true,
+        arrows: false,
+        dots: false,
+        autoplay: false,
+        autoplaySpeed: 2000,
+        prevArrow: "<button type='button' class='slick-prev'><i class='fa-solid fa-chevron-left'></i></button>",
+        nextArrow: "<button type='button' class='slick-next'><i class='fa-solid fa-chevron-right'></i></button>",
+    });
+    // });
+});
+
+$(function () {
+    // Hàm định dạng tiền VND
+    function formatVND(number) {
+        return number.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+    }
+
+    $('#slider-3').slider({
+        range: true,
+        min: 0,
+        max: 10000000,
+        values: [0, 10000000],
+        slide: function (event, ui) {
+            // Sử dụng hàm format để định dạng giá trị VND
+            $('#start input').val(formatVND(ui.values[0]));
+            $('#stop input').val(formatVND(ui.values[1]));
+        },
+    });
+
+    // Khởi tạo giá trị ban đầu với định dạng VND
+    $('#start input').val(formatVND($('#slider-3').slider('values', 0)));
+    $('#stop input').val(formatVND($('#slider-3').slider('values', 1)));
 });
