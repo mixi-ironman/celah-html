@@ -1,0 +1,2154 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            href="https://i.pinimg.com/originals/b2/57/81/b2578191becd55a7ebbc3aa9cfda9a7a.jpg"
+            type="image/x-icon"
+        />
+        <title>Home Page</title>
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+        <!-- Font-awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- slick(Swiper,own) CSS -->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+        />
+        <!-- External link css -->
+        <link rel="stylesheet" href="./assets/css/global.css" />
+        <link rel="stylesheet" href="./assets/css/home.css" />
+        <link rel="stylesheet" href="./assets/css/main.css" />
+        <link rel="stylesheet" href="./assets/css/index.css" />
+        <link rel="stylesheet" href="./assets/css/ajax_cart.css" />
+        <link rel="stylesheet" href="./assets/css/product.css" />
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header">
+            <div class="top_header">
+                <div class="text_top_header">
+                    Siêu sale tháng 7 lên đến 50% <span>|</span> <a href="#" title="Mua hàng ngay">Mua hàng ngay</a>
+                </div>
+            </div>
+            <div class="middle-header">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-2 col-lg-2 d-lg-block d-none block-logo">
+                            <a href="/" class="logo">
+                                <img
+                                    src="//bizweb.dktcdn.net/100/445/219/themes/895999/assets/logo.png?1697789040374"
+                                    alt="Template Celah"
+                                />
+                            </a>
+                        </div>
+                        <div class="col-xl-7 col-lg-8 block-search">
+                            <div class="nd-header-search nd-searchs">
+                                <form action="/search" method="get" class="nd-header-search-form" role="search">
+                                    <input
+                                        type="text"
+                                        name="query"
+                                        class="search-auto form-control"
+                                        placeholder="Tìm kiếm..."
+                                        autocomplete="off"
+                                    />
+                                    <input type="hidden" name="type" value="product" />
+                                    <button class="btn btn-default" type="submit" aria-label="Tìm kiếm">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="25"
+                                            height="24"
+                                            viewBox="0 0 25 24"
+                                            fill="none"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M14.4057 12.4769C16.0756 10.1337 15.8595 6.85958 13.7572 4.75736C11.4141 2.41421 7.61509 2.41421 5.27195 4.75736C2.9288 7.1005 2.9288 10.8995 5.27195 13.2426C7.37417 15.3449 10.6483 15.561 12.9915 13.8911L18.707 19.6066L20.1212 18.1924L14.4057 12.4769ZM12.343 6.17157C13.9051 7.73367 13.9051 10.2663 12.343 11.8284C10.7809 13.3905 8.24826 13.3905 6.68616 11.8284C5.12406 10.2663 5.12406 7.73367 6.68616 6.17157C8.24826 4.60948 10.7809 4.60948 12.343 6.17157Z"
+                                                fill="#333333"
+                                            ></path>
+                                        </svg>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-2 d-lg-flex header-right">
+                            <div class="header-page-link">
+                                <ul class="group-account">
+                                    <li class="user d-none d-md-block d-lg-block d-xl-block">
+                                        <div class="icon">
+                                            <a href="/account" title="Tài khoản của bạn" rel="nofollow">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24"
+                                                    height="24"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                >
+                                                    <path
+                                                        d="M12 2C9.243 2 7 4.243 7 7C7 9.757 9.243 12 12 12C14.757 12 17 9.757 17 7C17 4.243 14.757 2 12 2ZM12 10C10.346 10 9 8.654 9 7C9 5.346 10.346 4 12 4C13.654 4 15 5.346 15 7C15 8.654 13.654 10 12 10ZM21 21V20C21 16.141 17.859 13 14 13H10C6.14 13 3 16.141 3 20V21H5V20C5 17.243 7.243 15 10 15H14C16.757 15 19 17.243 19 20V21H21Z"
+                                                        fill="#333333"
+                                                    ></path>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <div class="drop-account">
+                                            <a href="/account/login">Đăng nhập</a>
+                                            <a href="/account/register">Đăng ký</a>
+                                        </div>
+                                    </li>
+                                    <li class="block-wish">
+                                        <div class="icon">
+                                            <a href="/danh-sach-yeu-thich" title="Yêu thích sản phẩm" rel="nofollow">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24"
+                                                    height="24"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        clip-rule="evenodd"
+                                                        d="M12 5C11.6604 4.60884 11.2646 4.26729 10.8278 3.9824C9.86267 3.35284 8.69792 3 7.5 3C4.42 3 2 5.37384 2 8.3951C2 9.46861 2.25574 10.488 2.69383 11.4578C4.0526 14.4686 7.16576 17.0093 9.8455 19.1963C10.617 19.8259 11.3526 20.4262 12 21C12.6474 20.4262 13.383 19.8259 14.1545 19.1963C16.8342 17.0093 19.9473 14.4687 21.3061 11.458C21.7442 10.4881 22 9.46866 22 8.3951C22 5.37384 19.58 3 16.5 3C15.3021 3 14.1373 3.35284 13.1722 3.9824C12.7354 4.26729 12.3396 4.60884 12 5ZM12 18.3699C12.3228 18.1024 12.6527 17.8326 12.9822 17.5633C13.2612 17.3351 13.5399 17.1073 13.8136 16.8813C14.9091 15.9769 15.9814 15.058 16.9309 14.095C18.106 12.9033 18.9793 11.7563 19.4879 10.6242C19.8233 9.8767 20 9.13633 20 8.3951C20 6.51455 18.5119 5 16.5 5C15.3116 5 14.2025 5.51373 13.5103 6.31111L12 8.05084L10.4897 6.31111C9.79748 5.51373 8.68843 5 7.5 5C5.48808 5 4 6.51455 4 8.3951C4 9.13633 4.17674 9.8767 4.51214 10.6242C5.02069 11.7563 5.89402 12.9033 7.06909 14.095C8.01864 15.058 9.09095 15.9769 10.1864 16.8813C10.4601 17.1073 10.7388 17.3351 11.0178 17.5633C11.3473 17.8326 11.6772 18.1024 12 18.3699Z"
+                                                        fill="#333333"
+                                                    ></path>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="cart-drop">
+                                        <div class="icon">
+                                            <a
+                                                href="javascript:;"
+                                                class="nd-header-cart"
+                                                aria-label="Xem giỏ hàng"
+                                                title="Giỏ hàng"
+                                            >
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="18"
+                                                    height="22"
+                                                    viewBox="0 0 18 22"
+                                                    fill="none"
+                                                >
+                                                    <path
+                                                        d="M17.5373 17.4929L16.6053 6.23836C16.5473 5.51328 15.9074 4.94527 15.1486 4.94527H13.3077V4.86598C13.3077 2.73426 11.498 1 9.27364 1C7.04924 1 5.23958 2.73426 5.23958 4.86598V4.94527H3.39869C2.63989 4.94527 1.99998 5.51324 1.94206 6.23684L1.00986 17.4944C0.937715 18.3958 1.26397 19.2932 1.90501 19.9564C2.54598 20.6196 3.45462 21 4.39803 21H14.1493C15.0926 21 16.0013 20.6196 16.6423 19.9564C17.2834 19.2932 17.6096 18.3958 17.5373 17.4929ZM6.46199 4.86598C6.46199 3.38023 7.7233 2.17148 9.27364 2.17148C10.824 2.17148 12.0853 3.38027 12.0853 4.86598V4.94527H6.46199V4.86598ZM15.7454 19.1604C15.329 19.5912 14.7621 19.8285 14.1493 19.8285H4.39803C3.78515 19.8285 3.21829 19.5912 2.80183 19.1603C2.38534 18.7295 2.18182 18.1696 2.22861 17.5855L3.16081 6.32797C3.17027 6.20953 3.27482 6.11676 3.39873 6.11676H5.23962V7.55953C5.23962 7.88301 5.51329 8.14527 5.85083 8.14527C6.18837 8.14527 6.46204 7.88301 6.46204 7.55953V6.11676H12.0854V7.55953C12.0854 7.88301 12.359 8.14527 12.6966 8.14527C13.0341 8.14527 13.3078 7.88301 13.3078 7.55953V6.11676H15.1486C15.2725 6.11676 15.377 6.20953 15.3867 6.32949L16.3187 17.584C16.3655 18.1696 16.1619 18.7294 15.7454 19.1604Z"
+                                                        fill="#333333"
+                                                    ></path>
+                                                    <path
+                                                        d="M17.5373 17.4929L17.7865 17.473L17.7865 17.4723L17.5373 17.4929ZM16.6053 6.23836L16.3561 6.25832L16.3562 6.25899L16.6053 6.23836ZM13.3077 4.94527H13.0577V5.19527H13.3077V4.94527ZM13.3077 4.86598H13.5577H13.3077ZM5.23958 4.94527V5.19527H5.48958V4.94527H5.23958ZM1.94206 6.23684L2.19121 6.25747L2.19127 6.25678L1.94206 6.23684ZM1.00986 17.4944L0.760714 17.4738L0.760659 17.4745L1.00986 17.4944ZM1.90501 19.9564L2.08478 19.7826L2.08477 19.7826L1.90501 19.9564ZM12.0853 4.94527V5.19527H12.3353V4.94527H12.0853ZM6.46199 4.94527H6.21199V5.19527H6.46199V4.94527ZM15.7454 19.1604L15.9252 19.3341L15.9252 19.3341L15.7454 19.1604ZM2.80183 19.1603L2.9816 18.9866L2.98158 18.9866L2.80183 19.1603ZM2.22861 17.5855L1.97946 17.5649L1.97941 17.5656L2.22861 17.5855ZM3.16081 6.32797L3.40996 6.3486L3.41002 6.34787L3.16081 6.32797ZM5.23962 6.11676H5.48962V5.86676H5.23962V6.11676ZM6.46204 6.11676V5.86676H6.21204V6.11676H6.46204ZM12.0854 6.11676H12.3354V5.86676H12.0854V6.11676ZM13.3078 6.11676V5.86676H13.0578V6.11676H13.3078ZM15.3867 6.32949L15.1375 6.34948L15.1375 6.35012L15.3867 6.32949ZM16.3187 17.584L16.5679 17.5641L16.5678 17.5634L16.3187 17.584ZM17.7865 17.4723L16.8545 6.21773L16.3562 6.25899L17.2882 17.5135L17.7865 17.4723ZM16.8545 6.2184C16.7853 5.35469 16.0288 4.69527 15.1486 4.69527V5.19527C15.786 5.19527 16.3092 5.67187 16.3561 6.25832L16.8545 6.2184ZM15.1486 4.69527H13.3077V5.19527H15.1486V4.69527ZM13.5577 4.94527V4.86598H13.0577V4.94527H13.5577ZM13.5577 4.86598C13.5577 2.58626 11.626 0.75 9.27364 0.75V1.25C11.3701 1.25 13.0577 2.88225 13.0577 4.86598H13.5577ZM9.27364 0.75C6.9213 0.75 4.98958 2.58627 4.98958 4.86598H5.48958C5.48958 2.88225 7.17717 1.25 9.27364 1.25V0.75ZM4.98958 4.86598V4.94527H5.48958V4.86598H4.98958ZM5.23958 4.69527H3.39869V5.19527H5.23958V4.69527ZM3.39869 4.69527C2.51868 4.69527 1.76189 5.35447 1.69286 6.21689L2.19127 6.25678C2.23808 5.67201 2.7611 5.19527 3.39869 5.19527V4.69527ZM1.69292 6.21621L0.760715 17.4738L1.25901 17.515L2.19121 6.25747L1.69292 6.21621ZM0.760659 17.4745C0.682657 18.449 1.03547 19.4165 1.72526 20.1301L2.08477 19.7826C1.49246 19.1698 1.19277 18.3426 1.25906 17.5144L0.760659 17.4745ZM1.72524 20.1301C2.41451 20.8433 3.38857 21.25 4.39803 21.25V20.75C3.52066 20.75 2.67744 20.3959 2.08478 19.7826L1.72524 20.1301ZM4.39803 21.25H14.1493V20.75H4.39803V21.25ZM14.1493 21.25C15.1587 21.25 16.1328 20.8433 16.8221 20.1302L16.4626 19.7827C15.8698 20.3959 15.0266 20.75 14.1493 20.75V21.25ZM16.8221 20.1302C17.5119 19.4165 17.8646 18.4489 17.7865 17.473L17.2881 17.5128C17.3545 18.3426 17.0548 19.1699 16.4626 19.7827L16.8221 20.1302ZM6.71199 4.86598C6.71199 3.52823 7.85124 2.42148 9.27364 2.42148V1.92148C7.59536 1.92148 6.21199 3.23224 6.21199 4.86598H6.71199ZM9.27364 2.42148C10.6961 2.42148 11.8353 3.52827 11.8353 4.86598H12.3353C12.3353 3.23228 10.952 1.92148 9.27364 1.92148V2.42148ZM11.8353 4.86598V4.94527H12.3353V4.86598H11.8353ZM12.0853 4.69527H6.46199V5.19527H12.0853V4.69527ZM6.71199 4.94527V4.86598H6.21199V4.94527H6.71199ZM15.5657 18.9866C15.1975 19.3675 14.6961 19.5785 14.1493 19.5785V20.0785C14.8282 20.0785 15.4604 19.815 15.9252 19.3341L15.5657 18.9866ZM14.1493 19.5785H4.39803V20.0785H14.1493V19.5785ZM4.39803 19.5785C3.85119 19.5785 3.34975 19.3675 2.9816 18.9866L2.62207 19.334C3.08682 19.8149 3.7191 20.0785 4.39803 20.0785V19.5785ZM2.98158 18.9866C2.61376 18.6061 2.43689 18.1163 2.47781 17.6055L1.97941 17.5656C1.92675 18.2229 2.15691 18.8528 2.62208 19.3341L2.98158 18.9866ZM2.47776 17.6062L3.40996 6.3486L2.91167 6.30734L1.97946 17.5649L2.47776 17.6062ZM3.41002 6.34787C3.40923 6.3578 3.40455 6.36337 3.40281 6.36492C3.40117 6.36638 3.39965 6.36676 3.39873 6.36676V5.86676C3.15347 5.86676 2.93214 6.05091 2.91161 6.30807L3.41002 6.34787ZM3.39873 6.36676H5.23962V5.86676H3.39873V6.36676ZM4.98962 6.11676V7.55953H5.48962V6.11676H4.98962ZM4.98962 7.55953C4.98962 8.031 5.38535 8.39527 5.85083 8.39527V7.89527C5.64122 7.89527 5.48962 7.73502 5.48962 7.55953H4.98962ZM5.85083 8.39527C6.3163 8.39527 6.71204 8.031 6.71204 7.55953H6.21204C6.21204 7.73502 6.06043 7.89527 5.85083 7.89527V8.39527ZM6.71204 7.55953V6.11676H6.21204V7.55953H6.71204ZM6.46204 6.36676H12.0854V5.86676H6.46204V6.36676ZM11.8354 6.11676V7.55953H12.3354V6.11676H11.8354ZM11.8354 7.55953C11.8354 8.031 12.2311 8.39527 12.6966 8.39527V7.89527C12.487 7.89527 12.3354 7.73502 12.3354 7.55953H11.8354ZM12.6966 8.39527C13.1621 8.39527 13.5578 8.031 13.5578 7.55953H13.0578C13.0578 7.73502 12.9062 7.89527 12.6966 7.89527V8.39527ZM13.5578 7.55953V6.11676H13.0578V7.55953H13.5578ZM13.3078 6.36676H15.1486V5.86676H13.3078V6.36676ZM15.1486 6.36676C15.1476 6.36676 15.1459 6.36632 15.1441 6.36472C15.1421 6.36296 15.1381 6.35778 15.1375 6.34948L15.6359 6.30951C15.6152 6.05199 15.395 5.86676 15.1486 5.86676V6.36676ZM15.1375 6.35012L16.0695 17.6046L16.5678 17.5634L15.6358 6.30886L15.1375 6.35012ZM16.0695 17.6039C16.1104 18.1164 15.9334 18.6061 15.5657 18.9866L15.9252 19.3341C16.3904 18.8527 16.6206 18.2228 16.5679 17.5641L16.0695 17.6039Z"
+                                                        fill="#333333"
+                                                    ></path>
+                                                </svg>
+
+                                                <span class="count_item_pr">5</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="d-lg-none d-inline-block">
+                                        <div class="category-action">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="18"
+                                                height="12"
+                                                viewBox="0 0 18 12"
+                                                fill="none"
+                                            >
+                                                <path d="M6 2V0H18V2H6Z" fill="#333333"></path>
+                                                <path d="M0 7H18V5H0V7Z" fill="#333333"></path>
+                                                <path d="M6 12H18V10H6V12Z" fill="#333333"></path>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-nav">
+                <div class="container">
+                    <div class="inner">
+                        <!-- current -->
+                        <div class="heade_menunavs">
+                            <div class="close-menu d-lg-none d-block">
+                                <svg
+                                    aria-hidden="true"
+                                    focusable="false"
+                                    data-prefix="fal"
+                                    data-icon="times-circle"
+                                    role="img"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512"
+                                    class="svg-inline--fa fa-times-circle fa-w-16"
+                                >
+                                    <path
+                                        fill="currentColor"
+                                        d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 464c-118.7 0-216-96.1-216-216 0-118.7 96.1-216 216-216 118.7 0 216 96.1 216 216 0 118.7-96.1 216-216 216zm94.8-285.3L281.5 256l69.3 69.3c4.7 4.7 4.7 12.3 0 17l-8.5 8.5c-4.7 4.7-12.3 4.7-17 0L256 281.5l-69.3 69.3c-4.7 4.7-12.3 4.7-17 0l-8.5-8.5c-4.7-4.7-4.7-12.3 0-17l69.3-69.3-69.3-69.3c-4.7-4.7-4.7-12.3 0-17l8.5-8.5c4.7-4.7 12.3-4.7 17 0l69.3 69.3 69.3-69.3c4.7-4.7 12.3-4.7 17 0l8.5 8.5c4.6 4.7 4.6 12.3 0 17z"
+                                        class=""
+                                    ></path>
+                                </svg>
+                            </div>
+                            <div class="wrap_main">
+                                <div class="bg-header-nav">
+                                    <nav class="header-nav">
+                                        <ul class="item_big">
+                                            <li class="nav-item active">
+                                                <a class="a-img" href="/" title="Trang chủ"> Trang chủ </a>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a class="a-img" href="/san-pham-khuyen-mai" title="Sale"> Sale </a>
+                                            </li>
+
+                                            <li class="nav-item has-mega">
+                                                <a class="a-img caret-down" href="/collections/all" title="Sản phẩm">
+                                                    Sản phẩm
+
+                                                    <svg
+                                                        aria-hidden="true"
+                                                        focusable="false"
+                                                        data-prefix="fas"
+                                                        data-icon="chevron-down"
+                                                        role="img"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 448 512"
+                                                        class="svg-inline--fa fa-chevron-down fa-w-14"
+                                                    >
+                                                        <path
+                                                            fill="currentColor"
+                                                            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                                                            class=""
+                                                        ></path>
+                                                    </svg>
+                                                </a>
+                                                <i class="fa fa-caret-down d-block d-sm-block d-lg-none d-xl-none"></i>
+
+                                                <div class="mega-content d-lg-block d-none">
+                                                    <div class="level0-wrapper2 row">
+                                                        <div class="col-xl-3 col-lg-3 col-12">
+                                                            <div class="nav-width nav-block nav-block-center">
+                                                                <ul class="level0">
+                                                                    <li class="level1 parent item">
+                                                                        <h2 class="h4">
+                                                                            <a href="/trang-diem" title="Trang điểm"
+                                                                                ><span>Trang điểm</span></a
+                                                                            >
+                                                                        </h2>
+                                                                        <ul class="level2">
+                                                                            <li class="level2">
+                                                                                <a href="/collections/all" title="Mắt"
+                                                                                    ><span>Mắt</span></a
+                                                                                >
+                                                                            </li>
+
+                                                                            <li class="level2">
+                                                                                <a href="/collections/all" title="Mặt"
+                                                                                    ><span>Mặt</span></a
+                                                                                >
+                                                                            </li>
+
+                                                                            <li class="level2">
+                                                                                <a href="/collections/all" title="Môi"
+                                                                                    ><span>Môi</span></a
+                                                                                >
+                                                                            </li>
+
+                                                                            <li class="level2">
+                                                                                <a
+                                                                                    href="/collections/all"
+                                                                                    title="Chân mày"
+                                                                                    ><span>Chân mày</span></a
+                                                                                >
+                                                                            </li>
+
+                                                                            <li class="level2">
+                                                                                <a
+                                                                                    href="/collections/all"
+                                                                                    title="Trang điểm"
+                                                                                    ><span>Trang điểm</span></a
+                                                                                >
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+
+                                                                    <li class="level1 parent item">
+                                                                        <h2 class="h4">
+                                                                            <a href="/cham-soc-da" title="Chăm sóc da"
+                                                                                ><span>Chăm sóc da</span></a
+                                                                            >
+                                                                        </h2>
+                                                                        <ul class="level2">
+                                                                            <li class="level2">
+                                                                                <a
+                                                                                    href="/collections/all"
+                                                                                    title="Làm sạch"
+                                                                                    ><span>Làm sạch</span></a
+                                                                                >
+                                                                            </li>
+
+                                                                            <li class="level2">
+                                                                                <a
+                                                                                    href="/collections/all"
+                                                                                    title="Chăm sóc da khác"
+                                                                                    ><span>Chăm sóc da khác</span></a
+                                                                                >
+                                                                            </li>
+
+                                                                            <li class="level2">
+                                                                                <a
+                                                                                    href="/collections/all"
+                                                                                    title="Dưỡng da"
+                                                                                    ><span>Dưỡng da</span></a
+                                                                                >
+                                                                            </li>
+
+                                                                            <li class="level2">
+                                                                                <a
+                                                                                    href="/collections/all"
+                                                                                    title="Chăm sóc chuyên sâu"
+                                                                                    ><span>Chăm sóc chuyên sâu</span></a
+                                                                                >
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+
+                                                                    <li class="level1 parent item">
+                                                                        <h2 class="h4">
+                                                                            <a
+                                                                                href="/cham-soc-co-the"
+                                                                                title="Chăm sóc cơ thể"
+                                                                                ><span>Chăm sóc cơ thể</span></a
+                                                                            >
+                                                                        </h2>
+                                                                        <ul class="level2">
+                                                                            <li class="level2">
+                                                                                <a
+                                                                                    href="/collections/all"
+                                                                                    title="Dưỡng móng tay"
+                                                                                    ><span>Dưỡng móng tay</span></a
+                                                                                >
+                                                                            </li>
+
+                                                                            <li class="level2">
+                                                                                <a
+                                                                                    href="/collections/all"
+                                                                                    title="Đặc trị cơ thể"
+                                                                                    ><span>Đặc trị cơ thể</span></a
+                                                                                >
+                                                                            </li>
+
+                                                                            <li class="level2">
+                                                                                <a
+                                                                                    href="/collections/all"
+                                                                                    title="Chăm sóc răng miệng"
+                                                                                    ><span>Chăm sóc răng miệng</span></a
+                                                                                >
+                                                                            </li>
+
+                                                                            <li class="level2">
+                                                                                <a
+                                                                                    href="/collections/all"
+                                                                                    title="Dưỡng thể"
+                                                                                    ><span>Dưỡng thể</span></a
+                                                                                >
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+
+                                                                    <li class="level1 parent item">
+                                                                        <h2 class="h4">
+                                                                            <a
+                                                                                href="/dung-cu-lam-dep"
+                                                                                title="Dụng cụ làm đẹp"
+                                                                                ><span>Dụng cụ làm đẹp</span></a
+                                                                            >
+                                                                        </h2>
+                                                                        <ul class="level2">
+                                                                            <li class="level2">
+                                                                                <a
+                                                                                    href="/collections/all"
+                                                                                    title="Chăm sóc móng"
+                                                                                    ><span>Chăm sóc móng</span></a
+                                                                                >
+                                                                            </li>
+
+                                                                            <li class="level2">
+                                                                                <a
+                                                                                    href="/collections/all"
+                                                                                    title="Dành cho mặt"
+                                                                                    ><span>Dành cho mặt</span></a
+                                                                                >
+                                                                            </li>
+
+                                                                            <li class="level2">
+                                                                                <a
+                                                                                    href="/collections/all"
+                                                                                    title="Cọ trang điểm"
+                                                                                    ><span>Cọ trang điểm</span></a
+                                                                                >
+                                                                            </li>
+
+                                                                            <li class="level2">
+                                                                                <a
+                                                                                    href="/collections/all"
+                                                                                    title="Dụng cụ trang điểm"
+                                                                                    ><span>Dụng cụ trang điểm</span></a
+                                                                                >
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-9 col-lg-9 col-12">
+                                                            <div class="block-image-menu row">
+                                                                <div class="col-xl-5 col-xl-5-fixmega col-lg-6">
+                                                                    <div class="image-defaut-menu">
+                                                                        <a href="#" title="Banner mega menu 1"
+                                                                            ><img
+                                                                                alt="Banner mega menu 1"
+                                                                                src="//bizweb.dktcdn.net/100/445/219/themes/895999/assets/image_mega_1.jpg?1697789040374"
+                                                                        /></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xl-7 col-xl-7-fixmega col-lg-6">
+                                                                    <div class="row">
+                                                                        <div class="col-xl-12 col-lg-12">
+                                                                            <div
+                                                                                class="image-defaut-menu margin-bottom-20"
+                                                                            >
+                                                                                <a href="#" title="Banner mega menu 2"
+                                                                                    ><img
+                                                                                        alt="Banner mega menu 2"
+                                                                                        src="//bizweb.dktcdn.net/100/445/219/themes/895999/assets/image_mega_2.jpg?1697789040374"
+                                                                                /></a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-xl-6 col-lg-6">
+                                                                            <div class="image-defaut-menu">
+                                                                                <a href="#" title="Banner mega menu 3"
+                                                                                    ><img
+                                                                                        alt="Banner mega menu 3"
+                                                                                        src="//bizweb.dktcdn.net/100/445/219/themes/895999/assets/image_mega_3.jpg?1697789040374"
+                                                                                /></a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-xl-6 col-lg-6">
+                                                                            <div class="image-defaut-menu">
+                                                                                <a href="#" title="Banner mega menu 4"
+                                                                                    ><img
+                                                                                        alt="Banner mega menu 4"
+                                                                                        src="//bizweb.dktcdn.net/100/445/219/themes/895999/assets/image_mega_4.jpg?1697789040374"
+                                                                                /></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <ul class="item_small d-lg-none">
+                                                    <li>
+                                                        <a class="caret-down" href="/trang-diem" title="Trang điểm">
+                                                            Trang điểm
+                                                        </a>
+
+                                                        <i class="fa fa-caret-down"></i>
+
+                                                        <ul>
+                                                            <li>
+                                                                <a href="/collections/all" title="Mắt" class="a3"
+                                                                    >Mắt</a
+                                                                >
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="/collections/all" title="Mặt" class="a3"
+                                                                    >Mặt</a
+                                                                >
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="/collections/all" title="Môi" class="a3"
+                                                                    >Môi</a
+                                                                >
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="/collections/all" title="Chân mày" class="a3"
+                                                                    >Chân mày</a
+                                                                >
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="/collections/all" title="Trang điểm" class="a3"
+                                                                    >Trang điểm</a
+                                                                >
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="caret-down" href="/cham-soc-da" title="Chăm sóc da">
+                                                            Chăm sóc da
+                                                        </a>
+
+                                                        <i class="fa fa-caret-down"></i>
+
+                                                        <ul>
+                                                            <li>
+                                                                <a href="/collections/all" title="Làm sạch" class="a3"
+                                                                    >Làm sạch</a
+                                                                >
+                                                            </li>
+
+                                                            <li>
+                                                                <a
+                                                                    href="/collections/all"
+                                                                    title="Chăm sóc da khác"
+                                                                    class="a3"
+                                                                    >Chăm sóc da khác</a
+                                                                >
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="/collections/all" title="Dưỡng da" class="a3"
+                                                                    >Dưỡng da</a
+                                                                >
+                                                            </li>
+
+                                                            <li>
+                                                                <a
+                                                                    href="/collections/all"
+                                                                    title="Chăm sóc chuyên sâu"
+                                                                    class="a3"
+                                                                    >Chăm sóc chuyên sâu</a
+                                                                >
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+
+                                                    <li>
+                                                        <a
+                                                            class="caret-down"
+                                                            href="/cham-soc-co-the"
+                                                            title="Chăm sóc cơ thể"
+                                                        >
+                                                            Chăm sóc cơ thể
+                                                        </a>
+
+                                                        <i class="fa fa-caret-down"></i>
+
+                                                        <ul>
+                                                            <li>
+                                                                <a
+                                                                    href="/collections/all"
+                                                                    title="Dưỡng móng tay"
+                                                                    class="a3"
+                                                                    >Dưỡng móng tay</a
+                                                                >
+                                                            </li>
+
+                                                            <li>
+                                                                <a
+                                                                    href="/collections/all"
+                                                                    title="Đặc trị cơ thể"
+                                                                    class="a3"
+                                                                    >Đặc trị cơ thể</a
+                                                                >
+                                                            </li>
+
+                                                            <li>
+                                                                <a
+                                                                    href="/collections/all"
+                                                                    title="Chăm sóc răng miệng"
+                                                                    class="a3"
+                                                                    >Chăm sóc răng miệng</a
+                                                                >
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="/collections/all" title="Dưỡng thể" class="a3"
+                                                                    >Dưỡng thể</a
+                                                                >
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+
+                                                    <li>
+                                                        <a
+                                                            class="caret-down"
+                                                            href="/dung-cu-lam-dep"
+                                                            title="Dụng cụ làm đẹp"
+                                                        >
+                                                            Dụng cụ làm đẹp
+                                                        </a>
+
+                                                        <i class="fa fa-caret-down"></i>
+
+                                                        <ul>
+                                                            <li>
+                                                                <a
+                                                                    href="/collections/all"
+                                                                    title="Chăm sóc móng"
+                                                                    class="a3"
+                                                                    >Chăm sóc móng</a
+                                                                >
+                                                            </li>
+
+                                                            <li>
+                                                                <a
+                                                                    href="/collections/all"
+                                                                    title="Dành cho mặt"
+                                                                    class="a3"
+                                                                    >Dành cho mặt</a
+                                                                >
+                                                            </li>
+
+                                                            <li>
+                                                                <a
+                                                                    href="/collections/all"
+                                                                    title="Cọ trang điểm"
+                                                                    class="a3"
+                                                                    >Cọ trang điểm</a
+                                                                >
+                                                            </li>
+
+                                                            <li>
+                                                                <a
+                                                                    href="/collections/all"
+                                                                    title="Dụng cụ trang điểm"
+                                                                    class="a3"
+                                                                    >Dụng cụ trang điểm</a
+                                                                >
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a class="a-img" href="/trang-diem" title="Trang điểm"> Trang điểm </a>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a class="a-img" href="/cham-soc-da" title="Chăm sóc da">
+                                                    Chăm sóc da
+                                                </a>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a class="a-img caret-down" href="/tin-tuc" title="Tin tức">
+                                                    Tin tức
+
+                                                    <svg
+                                                        aria-hidden="true"
+                                                        focusable="false"
+                                                        data-prefix="fas"
+                                                        data-icon="chevron-down"
+                                                        role="img"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 448 512"
+                                                        class="svg-inline--fa fa-chevron-down fa-w-14"
+                                                    >
+                                                        <path
+                                                            fill="currentColor"
+                                                            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                                                            class=""
+                                                        ></path>
+                                                    </svg>
+                                                </a>
+                                                <i class="fa fa-caret-down d-block d-sm-block d-lg-none d-xl-none"></i>
+
+                                                <ul class="item_small">
+                                                    <li>
+                                                        <a
+                                                            class="caret-down"
+                                                            href="/bi-quyet-lam-dep"
+                                                            title="Bí quyết làm đẹp"
+                                                        >
+                                                            Bí quyết làm đẹp
+                                                        </a>
+
+                                                        <i class="fa fa-caret-down"></i>
+
+                                                        <ul>
+                                                            <li>
+                                                                <a
+                                                                    href="/tin-tuc-hot-deal"
+                                                                    title="Tin tức hot deal"
+                                                                    class="a3"
+                                                                    >Tin tức hot deal</a
+                                                                >
+                                                            </li>
+
+                                                            <li>
+                                                                <a
+                                                                    href="/uu-dai-dac-biet"
+                                                                    title="Ưu đãi đặc biệt"
+                                                                    class="a3"
+                                                                    >Ưu đãi đặc biệt</a
+                                                                >
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="" href="/cach-cham-soc-da" title="Cách chăm sóc da">
+                                                            Cách chăm sóc da
+                                                        </a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="" href="/cach-trang-diem" title="Cách trang điểm">
+                                                            Cách trang điểm
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a class="a-img" href="/lien-he" title="Liên hệ"> Liên hệ </a>
+                                            </li>
+
+                                            <li class="nav-item d-block d-sm-block d-md-block d-lg-none d-xl-none">
+                                                <a href="/account/login" title="Đăng nhập">Đăng nhập</a>
+                                            </li>
+                                            <li class="nav-item d-block d-sm-block d-md-block d-lg-none d-xl-none">
+                                                <a href="/account/register" title="Đăng ký">Đăng ký</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-lg-none d-block block-logo-mb">
+                            <a href="/" class="logo-mb">
+                                <img
+                                    src="//bizweb.dktcdn.net/100/445/219/themes/895999/assets/logo.png?1697789040374"
+                                    alt="Template Celah"
+                                />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="bread-crumb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 a-left">
+                        <ul class="breadcrumb">
+                            <li class="home">
+                                <a href="/"><span>Trang chủ</span></a>
+                                <span class="mr_lr">&nbsp;/&nbsp;</span>
+                            </li>
+
+                            <li>
+                                <a class="changeurl" href="/san-pham-sale-3"><span>Sản phẩm sale 3</span></a>
+                                <span class="mr_lr">&nbsp;/&nbsp;</span>
+                            </li>
+
+                            <li>
+                                <strong><span>Kem Dưỡng Da Chống Lão Hóa Radha Beauty Skincare</span></strong>
+                            </li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="container nd-product-page product product-margin"
+            itemscope=""
+            itemtype="http://schema.org/Product"
+        >
+            <div class="nd-image-and-info-product">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-12 nd-mobile-padding">
+                        <div class="product-image-block relative">
+                            <!-- Slider chính -->
+                            <div class="slider-for gallery-top">
+                                <div>
+                                    <a
+                                        href="//bizweb.dktcdn.net/thumb/1024x1024/100/445/219/products/s1.jpg?v=1640590559330"
+                                        title="Click để xem"
+                                    >
+                                        <img
+                                            height="600"
+                                            width="600"
+                                            src="https://bizweb.dktcdn.net/100/445/219/products/s1.jpg?v=1640590559330"
+                                            alt="Dior Addict Lip Tattoo Long-Wear Colored Tint 251 Natural Peach"
+                                            class="img-responsive mx-auto d-block"
+                                        />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a
+                                        href="//bizweb.dktcdn.net/thumb/1024x1024/100/445/219/products/s2.jpg?v=1640590560907"
+                                        title="Click để xem"
+                                    >
+                                        <img
+                                            height="600"
+                                            width="600"
+                                            src="https://bizweb.dktcdn.net/100/445/219/products/s2.jpg?v=1640590560907"
+                                            alt="Dior Addict Lip Tattoo Long-Wear Colored Tint 251 Natural Peach"
+                                            class="img-responsive mx-auto d-block"
+                                        />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a
+                                        href="//bizweb.dktcdn.net/thumb/1024x1024/100/445/219/products/s3.jpg?v=1640590562033"
+                                        title="Click để xem"
+                                    >
+                                        <img
+                                            height="600"
+                                            width="600"
+                                            src="https://bizweb.dktcdn.net/100/445/219/products/s3.jpg?v=1640590562033"
+                                            alt="Dior Addict Lip Tattoo Long-Wear Colored Tint 251 Natural Peach"
+                                            class="img-responsive mx-auto d-block"
+                                        />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a
+                                        href="//bizweb.dktcdn.net/thumb/1024x1024/100/445/219/products/s4.jpg?v=1640590562773"
+                                        title="Click để xem"
+                                    >
+                                        <img
+                                            height="600"
+                                            width="600"
+                                            src="https://bizweb.dktcdn.net/100/445/219/products/s4.jpg?v=1640590562773"
+                                            alt="Dior Addict Lip Tattoo Long-Wear Colored Tint 251 Natural Peach"
+                                            class="img-responsive mx-auto d-block"
+                                        />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a
+                                        href="//bizweb.dktcdn.net/thumb/1024x1024/100/445/219/products/s5.jpg?v=1640590563190"
+                                        title="Click để xem"
+                                    >
+                                        <img
+                                            height="600"
+                                            width="600"
+                                            src="https://bizweb.dktcdn.net/100/445/219/products/s5.jpg?v=1640590563190"
+                                            alt="Dior Addict Lip Tattoo Long-Wear Colored Tint 251 Natural Peach"
+                                            class="img-responsive mx-auto d-block"
+                                        />
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Slider thu nhỏ -->
+                            <div class="gallery_pro">
+                                <div class="slider-nav gallery-thumbs">
+                                    <div>
+                                        <img
+                                            height="80"
+                                            width="80"
+                                            src="//bizweb.dktcdn.net/thumb/medium/100/445/219/products/s1.jpg?v=1640590559330"
+                                            alt="Dior Addict Lip Tattoo Long-Wear Colored Tint 251 Natural Peach"
+                                            class="img-responsive mx-auto d-block gallery-thumbnail-item active"
+                                        />
+                                    </div>
+                                    <div>
+                                        <img
+                                            height="80"
+                                            width="80"
+                                            src="//bizweb.dktcdn.net/thumb/medium/100/445/219/products/s2.jpg?v=1640590560907"
+                                            alt="Dior Addict Lip Tattoo Long-Wear Colored Tint 251 Natural Peach"
+                                            class="img-responsive mx-auto d-block gallery-thumbnail-item"
+                                        />
+                                    </div>
+                                    <div>
+                                        <img
+                                            height="80"
+                                            width="80"
+                                            src="//bizweb.dktcdn.net/thumb/medium/100/445/219/products/s3.jpg?v=1640590562033"
+                                            alt="Dior Addict Lip Tattoo Long-Wear Colored Tint 251 Natural Peach"
+                                            class="img-responsive mx-auto d-block gallery-thumbnail-item"
+                                        />
+                                    </div>
+                                    <div>
+                                        <img
+                                            height="80"
+                                            width="80"
+                                            src="//bizweb.dktcdn.net/thumb/medium/100/445/219/products/s4.jpg?v=1640590562773"
+                                            alt="Dior Addict Lip Tattoo Long-Wear Colored Tint 251 Natural Peach"
+                                            class="img-responsive mx-auto d-block gallery-thumbnail-item"
+                                        />
+                                    </div>
+                                    <div>
+                                        <img
+                                            height="80"
+                                            width="80"
+                                            src="//bizweb.dktcdn.net/thumb/medium/100/445/219/products/s5.jpg?v=1640590563190"
+                                            alt="Dior Addict Lip Tattoo Long-Wear Colored Tint 251 Natural Peach"
+                                            class="img-responsive mx-auto d-block gallery-thumbnail-item"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-12 details-pro">
+                        <div class="nd-info-product">
+                            <div class="brand-name">
+                                <div class="sku-product"><span>Radha</span></div>
+                            </div>
+                            <h1 class="title-head">Kem Dưỡng Da Chống Lão Hóa Radha Beauty Skincare</h1>
+
+                            <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                                <link
+                                    itemprop="url"
+                                    href="https://template-celah.mysapo.net/kem-duong-da-chong-lao-hoa-radha-beauty-skincare"
+                                />
+                                <meta itemprop="priceValidUntil" content="2030-11-05" />
+                                <div itemprop="seller" itemtype="http://schema.org/Organization" itemscope="">
+                                    <meta itemprop="name" content="Template Celah" />
+                                </div>
+
+                                <div class="inventory_quantity d-none">
+                                    <span class="a-stock a2"
+                                        ><link itemprop="availability" href="http://schema.org/InStock" />Còn hàng</span
+                                    >
+                                </div>
+                                <div class="price-box clearfix">
+                                    <span class="special-price">
+                                        <span class="price product-price">550.000₫</span>
+                                        <meta itemprop="price" content="550000" />
+                                        <meta itemprop="priceCurrency" content="VND" />
+                                    </span>
+                                    <span class="save-price"><span class="discount_">- 8% </span></span>
+                                    <!-- Tiết kiệm -->
+                                    <span
+                                        class="old-price"
+                                        itemprop="priceSpecification"
+                                        itemscope=""
+                                        itemtype="http://schema.org/priceSpecification"
+                                    >
+                                        <del class="price product-price-old"> 600.000₫ </del>
+                                        <meta itemprop="price" content="600000" />
+                                        <meta itemprop="priceCurrency" content="VND" />
+                                    </span>
+                                    <span class="save-price-2"
+                                        >Tiết kiệm
+                                        <span class="price product-price-save">50.000₫</span>
+                                    </span>
+                                    <!-- Tiết kiệm -->
+                                </div>
+                            </div>
+
+                            <div class="form-product nd-form-product">
+                                <form
+                                    enctype="multipart/form-data"
+                                    id="add-to-cart-form"
+                                    data-cart-form=""
+                                    action="/cart/add"
+                                    method="post"
+                                    class="wishItem"
+                                >
+                                    <div class="form-product">
+                                        <div class="box-variant clearfix d-none">
+                                            <input type="hidden" id="one_variant" name="variantId" value="57206364" />
+                                        </div>
+
+                                        <div class="parameter_product">
+                                            <div class="code-product">
+                                                <span class="fnew">Code: <strong>Radha A105</strong></span>
+                                            </div>
+
+                                            <div class="vendor-xuatxu">
+                                                <div class="sku-product" id="vendor">
+                                                    <span class="fnew">Hãng sản xuất: <strong>Radha</strong></span>
+                                                </div>
+
+                                                <div class="sku-product">
+                                                    <span class="fnew tt"
+                                                        >Xuất xứ thương hiệu: <strong>Nhật Bản</strong></span
+                                                    >
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="service-product">
+                                            <div class="item">
+                                                <div class="icon">
+                                                    <img
+                                                        src="//bizweb.dktcdn.net/100/445/219/themes/895999/assets/icon_service_product_1.svg?1697789040374"
+                                                        alt="Giao hàng toàn quốc"
+                                                    />
+                                                </div>
+                                                <div class="info">
+                                                    <h3>Giao hàng toàn quốc</h3>
+                                                </div>
+                                            </div>
+
+                                            <div class="item">
+                                                <div class="icon">
+                                                    <img
+                                                        src="//bizweb.dktcdn.net/100/445/219/themes/895999/assets/icon_service_product_2.svg?1697789040374"
+                                                        alt="Thanh toán khi nhận hàng"
+                                                    />
+                                                </div>
+                                                <div class="info">
+                                                    <h3>Thanh toán khi nhận hàng</h3>
+                                                </div>
+                                            </div>
+
+                                            <div class="item">
+                                                <div class="icon">
+                                                    <img
+                                                        src="//bizweb.dktcdn.net/100/445/219/themes/895999/assets/icon_service_product_3.svg?1697789040374"
+                                                        alt="Cam kết đổi/trả hàng miễn phí"
+                                                    />
+                                                </div>
+                                                <div class="info">
+                                                    <h3>Cam kết đổi/trả hàng miễn phí</h3>
+                                                </div>
+                                            </div>
+
+                                            <div class="item">
+                                                <div class="icon">
+                                                    <img
+                                                        src="//bizweb.dktcdn.net/100/445/219/themes/895999/assets/icon_service_product_4.svg?1697789040374"
+                                                        alt="Cam kết hàng chính hãng"
+                                                    />
+                                                </div>
+                                                <div class="info">
+                                                    <h3>Cam kết hàng chính hãng</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-reviews-wish">
+                                            <a
+                                                href="javascript:void(0)"
+                                                class="action btn-compare js-btn-wishlist setWishlist btn-views"
+                                                data-wish="kem-duong-da-chong-lao-hoa-radha-beauty-skincare"
+                                                tabindex="0"
+                                                title="Thêm vào yêu thích"
+                                            >
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24"
+                                                    height="24"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        clip-rule="evenodd"
+                                                        d="M12 5C11.6604 4.60884 11.2646 4.26729 10.8278 3.9824C9.86267 3.35284 8.69792 3 7.5 3C4.42 3 2 5.37384 2 8.3951C2 9.46861 2.25574 10.488 2.69383 11.4578C4.0526 14.4686 7.16576 17.0093 9.8455 19.1963C10.617 19.8259 11.3526 20.4262 12 21C12.6474 20.4262 13.383 19.8259 14.1545 19.1963C16.8342 17.0093 19.9473 14.4687 21.3061 11.458C21.7442 10.4881 22 9.46866 22 8.3951C22 5.37384 19.58 3 16.5 3C15.3021 3 14.1373 3.35284 13.1722 3.9824C12.7354 4.26729 12.3396 4.60884 12 5ZM12 18.3699C12.3228 18.1024 12.6527 17.8326 12.9822 17.5633C13.2612 17.3351 13.5399 17.1073 13.8136 16.8813C14.9091 15.9769 15.9814 15.058 16.9309 14.095C18.106 12.9033 18.9793 11.7563 19.4879 10.6242C19.8233 9.8767 20 9.13633 20 8.3951C20 6.51455 18.5119 5 16.5 5C15.3116 5 14.2025 5.51373 13.5103 6.31111L12 8.05084L10.4897 6.31111C9.79748 5.51373 8.68843 5 7.5 5C5.48808 5 4 6.51455 4 8.3951C4 9.13633 4.17674 9.8767 4.51214 10.6242C5.02069 11.7563 5.89402 12.9033 7.06909 14.095C8.01864 15.058 9.09095 15.9769 10.1864 16.8813C10.4601 17.1073 10.7388 17.3351 11.0178 17.5633C11.3473 17.8326 11.6772 18.1024 12 18.3699Z"
+                                                        fill="#333333"
+                                                    ></path>
+                                                </svg>
+                                            </a>
+
+                                            <div class="sapo-product-reviews-badge" data-id="24210803"></div>
+                                        </div>
+
+                                        <div class="form-groups clearfix from-action-addcart">
+                                            <div class="qty-ant clearfix custom-btn-number">
+                                                <label class="d-none">Số lượng:</label>
+                                                <div class="custom custom-btn-numbers clearfix input_number_product">
+                                                    <button
+                                                        onclick="var result = document.getElementById('qty'); var qty = parseInt(result.value); 
+                                                        if (!isNaN(qty) && qty > 1) result.value = qty - 1; return false;"
+                                                        class="btn-minus btn-cts"
+                                                        type="button"
+                                                    >
+                                                        –
+                                                    </button>
+                                                    <input
+                                                        aria-label="Số lượng"
+                                                        type="text"
+                                                        class="qty input-text"
+                                                        id="qty"
+                                                        name="quantity"
+                                                        size="4"
+                                                        value="1"
+                                                        maxlength="3"
+                                                        onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;"
+                                                        onchange="if(this.value == 0)this.value=1;"
+                                                    />
+                                                    <button
+                                                        onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN(qty)) result.value++;return false;"
+                                                        class="btn-plus btn-cts"
+                                                        type="button"
+                                                    >
+                                                        +
+                                                    </button>
+                                                </div>
+
+                                                <div class="vd">
+                                                    <span class="vend_c">Còn hàng</span>
+                                                </div>
+                                            </div>
+                                            <div class="btn-mua">
+                                                <button
+                                                    type="submit"
+                                                    data-role="addtocart"
+                                                    class="btn btn-lg btn-gray btn-cart btn_buy add_to_cart"
+                                                >
+                                                    Thêm vào giỏ hàng
+                                                </button>
+                                                <button type="button" class="btn btn-lg btn-gray btn_buy btn-buy-now">
+                                                    Mua ngay
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="nd-product-tab">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a
+                                class="nav-link active"
+                                id="home-tab"
+                                data-toggle="tab"
+                                href="#home"
+                                role="tab"
+                                aria-controls="home"
+                                aria-selected="true"
+                                title="Chi tiết sản phẩm"
+                            >
+                                <span>Chi tiết sản phẩm</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <p>
+                                Ra đời vào năm 2014, Radha Beauty hiện là cái tên đang đi đầu xu hướng trên thị trường
+                                mỹ phẩm organic, tất cả các sản phẩm của hãng đều có tiêu chuẩn được công nhận bởi Bộ
+                                nông nghiệp Mỹ USDA. Radha Beauty Skincare Retinol Moisturizer là kem dưỡng 3 trong 1
+                                đến từ thương hiệu Radha Beauty giúp giảm sự xuất hiện của các nếp nhăn, giúp da sáng và
+                                đều màu, đồng thời làm sạch thoáng lỗ chân lông. Sản phẩm phù hợp với mọi loại da, không
+                                chứa chất làm đầy, hương nhân tạo, phẩm nhuộm và parabens. Công dụng nổi bật: - Hỗ trợ
+                                quá trình sản sinh collagen tự nhiên và đào thải tế bào chết kích thích tái tạo tế bào
+                                nhanh hơn, giúp điều trị các bệnh da tăng sắc tố. - Có tác dụng trị mụn với khả năng tẩy
+                                tế bào chết, làm sạch lỗ chân lông. - Dạng kem thấm nhanh, và không để lại vết đỏ trên
+                                da sau khi dùng trên da.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="nd-similar-product">
+            <div class="container">
+                <div class="block-title">
+                    <h2>
+                        <a href="/san-pham-trang-diem" title="Có thể bạn cũng quan tâm"> Có thể bạn cũng quan tâm </a>
+                    </h2>
+                </div>
+                <div class="product-list similar-products row g-2">
+                    <div class="col-6 col-md-4 col-xl-3">
+                        <div class="product-item">
+                            <div class="product-item__img-wrap">
+                                <a href="" class="product-item__transition">
+                                    <img
+                                        src="https://bizweb.dktcdn.net/thumb/large/100/445/219/products/s1.jpg?v=1640590559330"
+                                        alt="XTOURING Túi Ghi Đông"
+                                        class="product-item__img-thumbnail"
+                                    />
+                                    <!-- <div class="product-item__img-thumbnail"></div> -->
+                                    <div class="product-item__sale-label d-none">sale</div>
+                                </a>
+                                <div class="product-item__action">
+                                    <a
+                                        href=""
+                                        class="product-item__action-item product-item__action--add-cart cart-button btn-buy add_to_cart is-added"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            style="
+                                                width: 40px;
+                                                height: 40px;
+                                                background-color: 333333;
+                                                border-radius: 100px;
+                                                padding: 7px;
+                                            "
+                                        >
+                                            <path
+                                                d="M20.5373 18.4929L19.6053 7.23836C19.5473 6.51328 18.9074 5.94527 18.1486 5.94527H16.3077V5.86598C16.3077 3.73426 14.498 2 12.2736 2C10.0492 2 8.23958 3.73426 8.23958 5.86598V5.94527H6.39869C5.63989 5.94527 4.99998 6.51324 4.94206 7.23684L4.00986 18.4944C3.93772 19.3958 4.26397 20.2932 4.90501 20.9564C5.54598 21.6196 6.45462 22 7.39803 22H17.1493C18.0926 22 19.0013 21.6196 19.6423 20.9564C20.2834 20.2932 20.6096 19.3958 20.5373 18.4929ZM9.46199 5.86598C9.46199 4.38023 10.7233 3.17148 12.2736 3.17148C13.824 3.17148 15.0853 4.38027 15.0853 5.86598V5.94527H9.46199V5.86598ZM18.7454 20.1604C18.3289 20.5913 17.7621 20.8285 17.1493 20.8285H7.39803C6.78515 20.8285 6.21829 20.5912 5.80183 20.1603C5.38534 19.7295 5.18182 19.1696 5.22861 18.5855L6.16081 7.32797C6.17027 7.20953 6.27482 7.11676 6.39873 7.11676H8.23962V8.55953C8.23962 8.88301 8.51329 9.14527 8.85083 9.14527C9.18837 9.14527 9.46203 8.88301 9.46203 8.55953V7.11676H15.0854V8.55953C15.0854 8.88301 15.359 9.14527 15.6966 9.14527C16.0341 9.14527 16.3078 8.88301 16.3078 8.55953V7.11676H18.1486C18.2725 7.11676 18.377 7.20953 18.3867 7.32949L19.3187 18.584C19.3655 19.1696 19.1619 19.7294 18.7454 20.1604Z"
+                                                fill="white"
+                                            ></path>
+                                            <path
+                                                d="M20.5373 18.4929L20.7865 18.473L20.7865 18.4723L20.5373 18.4929ZM19.6053 7.23836L19.3561 7.25832L19.3562 7.25899L19.6053 7.23836ZM16.3077 5.94527H16.0577V6.19527H16.3077V5.94527ZM8.23958 5.94527V6.19527H8.48958V5.94527H8.23958ZM4.94206 7.23684L5.19121 7.25747L5.19127 7.25678L4.94206 7.23684ZM4.00986 18.4944L3.76071 18.4738L3.76066 18.4745L4.00986 18.4944ZM4.90501 20.9564L5.08478 20.7826L5.08477 20.7826L4.90501 20.9564ZM19.6423 20.9564L19.4626 20.7827L19.4626 20.7827L19.6423 20.9564ZM15.0853 5.94527V6.19527H15.3353V5.94527H15.0853ZM9.46199 5.94527H9.21199V6.19527H9.46199V5.94527ZM18.7454 20.1604L18.9252 20.3341L18.9252 20.3341L18.7454 20.1604ZM5.80183 20.1603L5.9816 19.9866L5.98158 19.9866L5.80183 20.1603ZM5.22861 18.5855L4.97946 18.5649L4.97941 18.5656L5.22861 18.5855ZM6.16081 7.32797L6.40996 7.3486L6.41002 7.34787L6.16081 7.32797ZM8.23962 7.11676H8.48962V6.86676H8.23962V7.11676ZM9.46203 7.11676V6.86676H9.21203V7.11676H9.46203ZM15.0854 7.11676H15.3354V6.86676H15.0854V7.11676ZM16.3078 7.11676V6.86676H16.0578V7.11676H16.3078ZM18.3867 7.32949L18.1375 7.34947L18.1375 7.35012L18.3867 7.32949ZM19.3187 18.584L19.5679 18.5641L19.5678 18.5634L19.3187 18.584ZM20.7865 18.4723L19.8545 7.21773L19.3562 7.25899L20.2882 18.5135L20.7865 18.4723ZM19.8545 7.2184C19.7853 6.35469 19.0288 5.69527 18.1486 5.69527V6.19527C18.786 6.19527 19.3092 6.67187 19.3561 7.25832L19.8545 7.2184ZM18.1486 5.69527H16.3077V6.19527H18.1486V5.69527ZM16.5577 5.94527V5.86598H16.0577V5.94527H16.5577ZM16.5577 5.86598C16.5577 3.58626 14.626 1.75 12.2736 1.75V2.25C14.3701 2.25 16.0577 3.88225 16.0577 5.86598H16.5577ZM12.2736 1.75C9.9213 1.75 7.98958 3.58627 7.98958 5.86598H8.48958C8.48958 3.88225 10.1772 2.25 12.2736 2.25V1.75ZM7.98958 5.86598V5.94527H8.48958V5.86598H7.98958ZM8.23958 5.69527H6.39869V6.19527H8.23958V5.69527ZM6.39869 5.69527C5.51868 5.69527 4.76189 6.35447 4.69286 7.21689L5.19127 7.25678C5.23807 6.67201 5.7611 6.19527 6.39869 6.19527V5.69527ZM4.69292 7.21621L3.76071 18.4738L4.25901 18.515L5.19121 7.25747L4.69292 7.21621ZM3.76066 18.4745C3.68266 19.449 4.03547 20.4165 4.72526 21.1301L5.08477 20.7826C4.49246 20.1698 4.19277 19.3426 4.25906 18.5144L3.76066 18.4745ZM4.72524 21.1301C5.41451 21.8433 6.38857 22.25 7.39803 22.25V21.75C6.52066 21.75 5.67744 21.3959 5.08478 20.7826L4.72524 21.1301ZM7.39803 22.25H17.1493V21.75H7.39803V22.25ZM17.1493 22.25C18.1587 22.25 19.1328 21.8433 19.8221 21.1302L19.4626 20.7827C18.8698 21.3959 18.0266 21.75 17.1493 21.75V22.25ZM19.8221 21.1302C20.5119 20.4165 20.8646 19.4489 20.7865 18.473L20.2881 18.5128C20.3545 19.3427 20.0548 20.1699 19.4626 20.7827L19.8221 21.1302ZM9.71199 5.86598C9.71199 4.52823 10.8512 3.42148 12.2736 3.42148V2.92148C10.5954 2.92148 9.21199 4.23224 9.21199 5.86598H9.71199ZM12.2736 3.42148C13.6961 3.42148 14.8353 4.52827 14.8353 5.86598H15.3353C15.3353 4.23228 13.952 2.92148 12.2736 2.92148V3.42148ZM14.8353 5.86598V5.94527H15.3353V5.86598H14.8353ZM15.0853 5.69527H9.46199V6.19527H15.0853V5.69527ZM9.71199 5.94527V5.86598H9.21199V5.94527H9.71199ZM18.5657 19.9866C18.1975 20.3675 17.6961 20.5785 17.1493 20.5785V21.0785C17.8282 21.0785 18.4604 20.815 18.9252 20.3341L18.5657 19.9866ZM17.1493 20.5785H7.39803V21.0785H17.1493V20.5785ZM7.39803 20.5785C6.85119 20.5785 6.34975 20.3675 5.9816 19.9866L5.62207 20.3341C6.08682 20.8149 6.7191 21.0785 7.39803 21.0785V20.5785ZM5.98158 19.9866C5.61376 19.6061 5.43689 19.1163 5.47781 18.6055L4.97941 18.5656C4.92675 19.2229 5.15691 19.8529 5.62208 20.3341L5.98158 19.9866ZM5.47776 18.6062L6.40996 7.3486L5.91167 7.30734L4.97946 18.5649L5.47776 18.6062ZM6.41002 7.34787C6.40923 7.3578 6.40455 7.36338 6.40281 7.36492C6.40117 7.36638 6.39965 7.36676 6.39873 7.36676V6.86676C6.15347 6.86676 5.93214 7.05091 5.91161 7.30807L6.41002 7.34787ZM6.39873 7.36676H8.23962V6.86676H6.39873V7.36676ZM7.98962 7.11676V8.55953H8.48962V7.11676H7.98962ZM7.98962 8.55953C7.98962 9.031 8.38535 9.39527 8.85083 9.39527V8.89527C8.64122 8.89527 8.48962 8.73502 8.48962 8.55953H7.98962ZM8.85083 9.39527C9.3163 9.39527 9.71203 9.031 9.71203 8.55953H9.21203C9.21203 8.73502 9.06043 8.89527 8.85083 8.89527V9.39527ZM9.71203 8.55953V7.11676H9.21203V8.55953H9.71203ZM9.46203 7.36676H15.0854V6.86676H9.46203V7.36676ZM14.8354 7.11676V8.55953H15.3354V7.11676H14.8354ZM14.8354 8.55953C14.8354 9.031 15.2311 9.39527 15.6966 9.39527V8.89527C15.487 8.89527 15.3354 8.73502 15.3354 8.55953H14.8354ZM15.6966 9.39527C16.162 9.39527 16.5578 9.031 16.5578 8.55953H16.0578C16.0578 8.73502 15.9062 8.89527 15.6966 8.89527V9.39527ZM16.5578 8.55953V7.11676H16.0578V8.55953H16.5578ZM16.3078 7.36676H18.1486V6.86676H16.3078V7.36676ZM18.1486 7.36676C18.1476 7.36676 18.1459 7.36632 18.1441 7.36472C18.1421 7.36296 18.1381 7.35778 18.1375 7.34947L18.6359 7.30951C18.6152 7.05199 18.395 6.86676 18.1486 6.86676V7.36676ZM18.1375 7.35012L19.0695 18.6046L19.5678 18.5634L18.6358 7.30886L18.1375 7.35012ZM19.0695 18.6039C19.1104 19.1164 18.9334 19.6061 18.5657 19.9866L18.9252 20.3341C19.3904 19.8527 19.6206 19.2229 19.5679 18.5641L19.0695 18.6039Z"
+                                                fill="white"
+                                            ></path>
+                                        </svg>
+                                    </a>
+                                    <a href="" class="product-item__action-item product-item__action--compared d-none">
+                                        <svg
+                                            aria-hidden="true"
+                                            focusable="false"
+                                            width="35"
+                                            height="35"
+                                            data-prefix="fal"
+                                            data-icon="cog"
+                                            role="img"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 512 512"
+                                            class="svg-inline--fa fa-cog fa-w-16"
+                                            style="
+                                                width: 40px;
+                                                height: 40px;
+                                                background-color: 333333;
+                                                border-radius: 100px;
+                                                padding: 10px;
+                                                color: white;
+                                            "
+                                        >
+                                            <path
+                                                fill="currentColor"
+                                                d="M482.696 299.276l-32.61-18.827a195.168 195.168 0 0 0 0-48.899l32.61-18.827c9.576-5.528 14.195-16.902 11.046-27.501-11.214-37.749-31.175-71.728-57.535-99.595-7.634-8.07-19.817-9.836-29.437-4.282l-32.562 18.798a194.125 194.125 0 0 0-42.339-24.48V38.049c0-11.13-7.652-20.804-18.484-23.367-37.644-8.909-77.118-8.91-114.77 0-10.831 2.563-18.484 12.236-18.484 23.367v37.614a194.101 194.101 0 0 0-42.339 24.48L105.23 81.345c-9.621-5.554-21.804-3.788-29.437 4.282-26.36 27.867-46.321 61.847-57.535 99.595-3.149 10.599 1.47 21.972 11.046 27.501l32.61 18.827a195.168 195.168 0 0 0 0 48.899l-32.61 18.827c-9.576 5.528-14.195 16.902-11.046 27.501 11.214 37.748 31.175 71.728 57.535 99.595 7.634 8.07 19.817 9.836 29.437 4.283l32.562-18.798a194.08 194.08 0 0 0 42.339 24.479v37.614c0 11.13 7.652 20.804 18.484 23.367 37.645 8.909 77.118 8.91 114.77 0 10.831-2.563 18.484-12.236 18.484-23.367v-37.614a194.138 194.138 0 0 0 42.339-24.479l32.562 18.798c9.62 5.554 21.803 3.788 29.437-4.283 26.36-27.867 46.321-61.847 57.535-99.595 3.149-10.599-1.47-21.972-11.046-27.501zm-65.479 100.461l-46.309-26.74c-26.988 23.071-36.559 28.876-71.039 41.059v53.479a217.145 217.145 0 0 1-87.738 0v-53.479c-33.621-11.879-43.355-17.395-71.039-41.059l-46.309 26.74c-19.71-22.09-34.689-47.989-43.929-75.958l46.329-26.74c-6.535-35.417-6.538-46.644 0-82.079l-46.329-26.74c9.24-27.969 24.22-53.869 43.929-75.969l46.309 26.76c27.377-23.434 37.063-29.065 71.039-41.069V44.464a216.79 216.79 0 0 1 87.738 0v53.479c33.978 12.005 43.665 17.637 71.039 41.069l46.309-26.76c19.709 22.099 34.689 47.999 43.929 75.969l-46.329 26.74c6.536 35.426 6.538 46.644 0 82.079l46.329 26.74c-9.24 27.968-24.219 53.868-43.929 75.957zM256 160c-52.935 0-96 43.065-96 96s43.065 96 96 96 96-43.065 96-96-43.065-96-96-96zm0 160c-35.29 0-64-28.71-64-64s28.71-64 64-64 64 28.71 64 64-28.71 64-64 64z"
+                                                class=""
+                                            ></path>
+                                        </svg>
+                                    </a>
+                                    <a href="" class="product-item__action-item product-item__action--wishlist"
+                                        ><i class="fa-regular fa-heart product-item__action-item-icon"></i
+                                    ></a>
+                                </div>
+                            </div>
+                            <div class="product-item__info">
+                                <a href="" class="product-item__name"
+                                    >Dior Addict Lip Tattoo Long-Wear Colored Tint 251 Natural Peach</a
+                                >
+                                <p class="product-item__sum">
+                                    Dior là tên gọi thông dụng của thương hiệu Christian Dior S.A., hãn...
+                                </p>
+                                <div class="product-item__price-wrap">
+                                    <span class="product-item__price">850.000₫</span>
+                                    <span class="product-item__discount">- 14% </span>
+                                    <span class="product-item__old-price">990.000₫</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-xl-3">
+                        <div class="product-item">
+                            <div class="product-item__img-wrap">
+                                <a href="" class="product-item__transition">
+                                    <img
+                                        src="https://bizweb.dktcdn.net/thumb/large/100/445/219/products/s1.jpg?v=1640590559330"
+                                        alt="XTOURING Túi Ghi Đông"
+                                        class="product-item__img-thumbnail"
+                                    />
+                                    <!-- <div class="product-item__img-thumbnail"></div> -->
+                                    <div class="product-item__sale-label d-none">sale</div>
+                                </a>
+                                <div class="product-item__action">
+                                    <a href="" class="product-item__action-item product-item__action--add-cart">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            style="
+                                                width: 40px;
+                                                height: 40px;
+                                                background-color: 333333;
+                                                border-radius: 100px;
+                                                padding: 7px;
+                                            "
+                                        >
+                                            <path
+                                                d="M20.5373 18.4929L19.6053 7.23836C19.5473 6.51328 18.9074 5.94527 18.1486 5.94527H16.3077V5.86598C16.3077 3.73426 14.498 2 12.2736 2C10.0492 2 8.23958 3.73426 8.23958 5.86598V5.94527H6.39869C5.63989 5.94527 4.99998 6.51324 4.94206 7.23684L4.00986 18.4944C3.93772 19.3958 4.26397 20.2932 4.90501 20.9564C5.54598 21.6196 6.45462 22 7.39803 22H17.1493C18.0926 22 19.0013 21.6196 19.6423 20.9564C20.2834 20.2932 20.6096 19.3958 20.5373 18.4929ZM9.46199 5.86598C9.46199 4.38023 10.7233 3.17148 12.2736 3.17148C13.824 3.17148 15.0853 4.38027 15.0853 5.86598V5.94527H9.46199V5.86598ZM18.7454 20.1604C18.3289 20.5913 17.7621 20.8285 17.1493 20.8285H7.39803C6.78515 20.8285 6.21829 20.5912 5.80183 20.1603C5.38534 19.7295 5.18182 19.1696 5.22861 18.5855L6.16081 7.32797C6.17027 7.20953 6.27482 7.11676 6.39873 7.11676H8.23962V8.55953C8.23962 8.88301 8.51329 9.14527 8.85083 9.14527C9.18837 9.14527 9.46203 8.88301 9.46203 8.55953V7.11676H15.0854V8.55953C15.0854 8.88301 15.359 9.14527 15.6966 9.14527C16.0341 9.14527 16.3078 8.88301 16.3078 8.55953V7.11676H18.1486C18.2725 7.11676 18.377 7.20953 18.3867 7.32949L19.3187 18.584C19.3655 19.1696 19.1619 19.7294 18.7454 20.1604Z"
+                                                fill="white"
+                                            ></path>
+                                            <path
+                                                d="M20.5373 18.4929L20.7865 18.473L20.7865 18.4723L20.5373 18.4929ZM19.6053 7.23836L19.3561 7.25832L19.3562 7.25899L19.6053 7.23836ZM16.3077 5.94527H16.0577V6.19527H16.3077V5.94527ZM8.23958 5.94527V6.19527H8.48958V5.94527H8.23958ZM4.94206 7.23684L5.19121 7.25747L5.19127 7.25678L4.94206 7.23684ZM4.00986 18.4944L3.76071 18.4738L3.76066 18.4745L4.00986 18.4944ZM4.90501 20.9564L5.08478 20.7826L5.08477 20.7826L4.90501 20.9564ZM19.6423 20.9564L19.4626 20.7827L19.4626 20.7827L19.6423 20.9564ZM15.0853 5.94527V6.19527H15.3353V5.94527H15.0853ZM9.46199 5.94527H9.21199V6.19527H9.46199V5.94527ZM18.7454 20.1604L18.9252 20.3341L18.9252 20.3341L18.7454 20.1604ZM5.80183 20.1603L5.9816 19.9866L5.98158 19.9866L5.80183 20.1603ZM5.22861 18.5855L4.97946 18.5649L4.97941 18.5656L5.22861 18.5855ZM6.16081 7.32797L6.40996 7.3486L6.41002 7.34787L6.16081 7.32797ZM8.23962 7.11676H8.48962V6.86676H8.23962V7.11676ZM9.46203 7.11676V6.86676H9.21203V7.11676H9.46203ZM15.0854 7.11676H15.3354V6.86676H15.0854V7.11676ZM16.3078 7.11676V6.86676H16.0578V7.11676H16.3078ZM18.3867 7.32949L18.1375 7.34947L18.1375 7.35012L18.3867 7.32949ZM19.3187 18.584L19.5679 18.5641L19.5678 18.5634L19.3187 18.584ZM20.7865 18.4723L19.8545 7.21773L19.3562 7.25899L20.2882 18.5135L20.7865 18.4723ZM19.8545 7.2184C19.7853 6.35469 19.0288 5.69527 18.1486 5.69527V6.19527C18.786 6.19527 19.3092 6.67187 19.3561 7.25832L19.8545 7.2184ZM18.1486 5.69527H16.3077V6.19527H18.1486V5.69527ZM16.5577 5.94527V5.86598H16.0577V5.94527H16.5577ZM16.5577 5.86598C16.5577 3.58626 14.626 1.75 12.2736 1.75V2.25C14.3701 2.25 16.0577 3.88225 16.0577 5.86598H16.5577ZM12.2736 1.75C9.9213 1.75 7.98958 3.58627 7.98958 5.86598H8.48958C8.48958 3.88225 10.1772 2.25 12.2736 2.25V1.75ZM7.98958 5.86598V5.94527H8.48958V5.86598H7.98958ZM8.23958 5.69527H6.39869V6.19527H8.23958V5.69527ZM6.39869 5.69527C5.51868 5.69527 4.76189 6.35447 4.69286 7.21689L5.19127 7.25678C5.23807 6.67201 5.7611 6.19527 6.39869 6.19527V5.69527ZM4.69292 7.21621L3.76071 18.4738L4.25901 18.515L5.19121 7.25747L4.69292 7.21621ZM3.76066 18.4745C3.68266 19.449 4.03547 20.4165 4.72526 21.1301L5.08477 20.7826C4.49246 20.1698 4.19277 19.3426 4.25906 18.5144L3.76066 18.4745ZM4.72524 21.1301C5.41451 21.8433 6.38857 22.25 7.39803 22.25V21.75C6.52066 21.75 5.67744 21.3959 5.08478 20.7826L4.72524 21.1301ZM7.39803 22.25H17.1493V21.75H7.39803V22.25ZM17.1493 22.25C18.1587 22.25 19.1328 21.8433 19.8221 21.1302L19.4626 20.7827C18.8698 21.3959 18.0266 21.75 17.1493 21.75V22.25ZM19.8221 21.1302C20.5119 20.4165 20.8646 19.4489 20.7865 18.473L20.2881 18.5128C20.3545 19.3427 20.0548 20.1699 19.4626 20.7827L19.8221 21.1302ZM9.71199 5.86598C9.71199 4.52823 10.8512 3.42148 12.2736 3.42148V2.92148C10.5954 2.92148 9.21199 4.23224 9.21199 5.86598H9.71199ZM12.2736 3.42148C13.6961 3.42148 14.8353 4.52827 14.8353 5.86598H15.3353C15.3353 4.23228 13.952 2.92148 12.2736 2.92148V3.42148ZM14.8353 5.86598V5.94527H15.3353V5.86598H14.8353ZM15.0853 5.69527H9.46199V6.19527H15.0853V5.69527ZM9.71199 5.94527V5.86598H9.21199V5.94527H9.71199ZM18.5657 19.9866C18.1975 20.3675 17.6961 20.5785 17.1493 20.5785V21.0785C17.8282 21.0785 18.4604 20.815 18.9252 20.3341L18.5657 19.9866ZM17.1493 20.5785H7.39803V21.0785H17.1493V20.5785ZM7.39803 20.5785C6.85119 20.5785 6.34975 20.3675 5.9816 19.9866L5.62207 20.3341C6.08682 20.8149 6.7191 21.0785 7.39803 21.0785V20.5785ZM5.98158 19.9866C5.61376 19.6061 5.43689 19.1163 5.47781 18.6055L4.97941 18.5656C4.92675 19.2229 5.15691 19.8529 5.62208 20.3341L5.98158 19.9866ZM5.47776 18.6062L6.40996 7.3486L5.91167 7.30734L4.97946 18.5649L5.47776 18.6062ZM6.41002 7.34787C6.40923 7.3578 6.40455 7.36338 6.40281 7.36492C6.40117 7.36638 6.39965 7.36676 6.39873 7.36676V6.86676C6.15347 6.86676 5.93214 7.05091 5.91161 7.30807L6.41002 7.34787ZM6.39873 7.36676H8.23962V6.86676H6.39873V7.36676ZM7.98962 7.11676V8.55953H8.48962V7.11676H7.98962ZM7.98962 8.55953C7.98962 9.031 8.38535 9.39527 8.85083 9.39527V8.89527C8.64122 8.89527 8.48962 8.73502 8.48962 8.55953H7.98962ZM8.85083 9.39527C9.3163 9.39527 9.71203 9.031 9.71203 8.55953H9.21203C9.21203 8.73502 9.06043 8.89527 8.85083 8.89527V9.39527ZM9.71203 8.55953V7.11676H9.21203V8.55953H9.71203ZM9.46203 7.36676H15.0854V6.86676H9.46203V7.36676ZM14.8354 7.11676V8.55953H15.3354V7.11676H14.8354ZM14.8354 8.55953C14.8354 9.031 15.2311 9.39527 15.6966 9.39527V8.89527C15.487 8.89527 15.3354 8.73502 15.3354 8.55953H14.8354ZM15.6966 9.39527C16.162 9.39527 16.5578 9.031 16.5578 8.55953H16.0578C16.0578 8.73502 15.9062 8.89527 15.6966 8.89527V9.39527ZM16.5578 8.55953V7.11676H16.0578V8.55953H16.5578ZM16.3078 7.36676H18.1486V6.86676H16.3078V7.36676ZM18.1486 7.36676C18.1476 7.36676 18.1459 7.36632 18.1441 7.36472C18.1421 7.36296 18.1381 7.35778 18.1375 7.34947L18.6359 7.30951C18.6152 7.05199 18.395 6.86676 18.1486 6.86676V7.36676ZM18.1375 7.35012L19.0695 18.6046L19.5678 18.5634L18.6358 7.30886L18.1375 7.35012ZM19.0695 18.6039C19.1104 19.1164 18.9334 19.6061 18.5657 19.9866L18.9252 20.3341C19.3904 19.8527 19.6206 19.2229 19.5679 18.5641L19.0695 18.6039Z"
+                                                fill="white"
+                                            ></path>
+                                        </svg>
+                                    </a>
+                                    <a href="" class="product-item__action-item product-item__action--compared d-none">
+                                        <svg
+                                            aria-hidden="true"
+                                            focusable="false"
+                                            width="35"
+                                            height="35"
+                                            data-prefix="fal"
+                                            data-icon="cog"
+                                            role="img"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 512 512"
+                                            class="svg-inline--fa fa-cog fa-w-16"
+                                            style="
+                                                width: 40px;
+                                                height: 40px;
+                                                background-color: 333333;
+                                                border-radius: 100px;
+                                                padding: 10px;
+                                                color: white;
+                                            "
+                                        >
+                                            <path
+                                                fill="currentColor"
+                                                d="M482.696 299.276l-32.61-18.827a195.168 195.168 0 0 0 0-48.899l32.61-18.827c9.576-5.528 14.195-16.902 11.046-27.501-11.214-37.749-31.175-71.728-57.535-99.595-7.634-8.07-19.817-9.836-29.437-4.282l-32.562 18.798a194.125 194.125 0 0 0-42.339-24.48V38.049c0-11.13-7.652-20.804-18.484-23.367-37.644-8.909-77.118-8.91-114.77 0-10.831 2.563-18.484 12.236-18.484 23.367v37.614a194.101 194.101 0 0 0-42.339 24.48L105.23 81.345c-9.621-5.554-21.804-3.788-29.437 4.282-26.36 27.867-46.321 61.847-57.535 99.595-3.149 10.599 1.47 21.972 11.046 27.501l32.61 18.827a195.168 195.168 0 0 0 0 48.899l-32.61 18.827c-9.576 5.528-14.195 16.902-11.046 27.501 11.214 37.748 31.175 71.728 57.535 99.595 7.634 8.07 19.817 9.836 29.437 4.283l32.562-18.798a194.08 194.08 0 0 0 42.339 24.479v37.614c0 11.13 7.652 20.804 18.484 23.367 37.645 8.909 77.118 8.91 114.77 0 10.831-2.563 18.484-12.236 18.484-23.367v-37.614a194.138 194.138 0 0 0 42.339-24.479l32.562 18.798c9.62 5.554 21.803 3.788 29.437-4.283 26.36-27.867 46.321-61.847 57.535-99.595 3.149-10.599-1.47-21.972-11.046-27.501zm-65.479 100.461l-46.309-26.74c-26.988 23.071-36.559 28.876-71.039 41.059v53.479a217.145 217.145 0 0 1-87.738 0v-53.479c-33.621-11.879-43.355-17.395-71.039-41.059l-46.309 26.74c-19.71-22.09-34.689-47.989-43.929-75.958l46.329-26.74c-6.535-35.417-6.538-46.644 0-82.079l-46.329-26.74c9.24-27.969 24.22-53.869 43.929-75.969l46.309 26.76c27.377-23.434 37.063-29.065 71.039-41.069V44.464a216.79 216.79 0 0 1 87.738 0v53.479c33.978 12.005 43.665 17.637 71.039 41.069l46.309-26.76c19.709 22.099 34.689 47.999 43.929 75.969l-46.329 26.74c6.536 35.426 6.538 46.644 0 82.079l46.329 26.74c-9.24 27.968-24.219 53.868-43.929 75.957zM256 160c-52.935 0-96 43.065-96 96s43.065 96 96 96 96-43.065 96-96-43.065-96-96-96zm0 160c-35.29 0-64-28.71-64-64s28.71-64 64-64 64 28.71 64 64-28.71 64-64 64z"
+                                                class=""
+                                            ></path>
+                                        </svg>
+                                    </a>
+                                    <a href="" class="product-item__action-item product-item__action--wishlist"
+                                        ><i class="fa-regular fa-heart product-item__action-item-icon"></i
+                                    ></a>
+                                </div>
+                            </div>
+                            <div class="product-item__info">
+                                <a href="" class="product-item__name"
+                                    >Dior Addict Lip Tattoo Long-Wear Colored Tint 251 Natural Peach</a
+                                >
+                                <p class="product-item__sum">
+                                    Dior là tên gọi thông dụng của thương hiệu Christian Dior S.A., hãn...
+                                </p>
+                                <div class="product-item__price-wrap">
+                                    <span class="product-item__price">850.000₫</span>
+                                    <span class="product-item__discount">- 14% </span>
+                                    <span class="product-item__old-price">990.000₫</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-xl-3">
+                        <div class="product-item">
+                            <div class="product-item__img-wrap">
+                                <a href="" class="product-item__transition">
+                                    <img
+                                        src="https://bizweb.dktcdn.net/thumb/large/100/445/219/products/s1.jpg?v=1640590559330"
+                                        alt="XTOURING Túi Ghi Đông"
+                                        class="product-item__img-thumbnail"
+                                    />
+                                    <!-- <div class="product-item__img-thumbnail"></div> -->
+                                    <div class="product-item__sale-label d-none">sale</div>
+                                </a>
+                                <div class="product-item__action">
+                                    <a href="" class="product-item__action-item product-item__action--add-cart">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            style="
+                                                width: 40px;
+                                                height: 40px;
+                                                background-color: 333333;
+                                                border-radius: 100px;
+                                                padding: 7px;
+                                            "
+                                        >
+                                            <path
+                                                d="M20.5373 18.4929L19.6053 7.23836C19.5473 6.51328 18.9074 5.94527 18.1486 5.94527H16.3077V5.86598C16.3077 3.73426 14.498 2 12.2736 2C10.0492 2 8.23958 3.73426 8.23958 5.86598V5.94527H6.39869C5.63989 5.94527 4.99998 6.51324 4.94206 7.23684L4.00986 18.4944C3.93772 19.3958 4.26397 20.2932 4.90501 20.9564C5.54598 21.6196 6.45462 22 7.39803 22H17.1493C18.0926 22 19.0013 21.6196 19.6423 20.9564C20.2834 20.2932 20.6096 19.3958 20.5373 18.4929ZM9.46199 5.86598C9.46199 4.38023 10.7233 3.17148 12.2736 3.17148C13.824 3.17148 15.0853 4.38027 15.0853 5.86598V5.94527H9.46199V5.86598ZM18.7454 20.1604C18.3289 20.5913 17.7621 20.8285 17.1493 20.8285H7.39803C6.78515 20.8285 6.21829 20.5912 5.80183 20.1603C5.38534 19.7295 5.18182 19.1696 5.22861 18.5855L6.16081 7.32797C6.17027 7.20953 6.27482 7.11676 6.39873 7.11676H8.23962V8.55953C8.23962 8.88301 8.51329 9.14527 8.85083 9.14527C9.18837 9.14527 9.46203 8.88301 9.46203 8.55953V7.11676H15.0854V8.55953C15.0854 8.88301 15.359 9.14527 15.6966 9.14527C16.0341 9.14527 16.3078 8.88301 16.3078 8.55953V7.11676H18.1486C18.2725 7.11676 18.377 7.20953 18.3867 7.32949L19.3187 18.584C19.3655 19.1696 19.1619 19.7294 18.7454 20.1604Z"
+                                                fill="white"
+                                            ></path>
+                                            <path
+                                                d="M20.5373 18.4929L20.7865 18.473L20.7865 18.4723L20.5373 18.4929ZM19.6053 7.23836L19.3561 7.25832L19.3562 7.25899L19.6053 7.23836ZM16.3077 5.94527H16.0577V6.19527H16.3077V5.94527ZM8.23958 5.94527V6.19527H8.48958V5.94527H8.23958ZM4.94206 7.23684L5.19121 7.25747L5.19127 7.25678L4.94206 7.23684ZM4.00986 18.4944L3.76071 18.4738L3.76066 18.4745L4.00986 18.4944ZM4.90501 20.9564L5.08478 20.7826L5.08477 20.7826L4.90501 20.9564ZM19.6423 20.9564L19.4626 20.7827L19.4626 20.7827L19.6423 20.9564ZM15.0853 5.94527V6.19527H15.3353V5.94527H15.0853ZM9.46199 5.94527H9.21199V6.19527H9.46199V5.94527ZM18.7454 20.1604L18.9252 20.3341L18.9252 20.3341L18.7454 20.1604ZM5.80183 20.1603L5.9816 19.9866L5.98158 19.9866L5.80183 20.1603ZM5.22861 18.5855L4.97946 18.5649L4.97941 18.5656L5.22861 18.5855ZM6.16081 7.32797L6.40996 7.3486L6.41002 7.34787L6.16081 7.32797ZM8.23962 7.11676H8.48962V6.86676H8.23962V7.11676ZM9.46203 7.11676V6.86676H9.21203V7.11676H9.46203ZM15.0854 7.11676H15.3354V6.86676H15.0854V7.11676ZM16.3078 7.11676V6.86676H16.0578V7.11676H16.3078ZM18.3867 7.32949L18.1375 7.34947L18.1375 7.35012L18.3867 7.32949ZM19.3187 18.584L19.5679 18.5641L19.5678 18.5634L19.3187 18.584ZM20.7865 18.4723L19.8545 7.21773L19.3562 7.25899L20.2882 18.5135L20.7865 18.4723ZM19.8545 7.2184C19.7853 6.35469 19.0288 5.69527 18.1486 5.69527V6.19527C18.786 6.19527 19.3092 6.67187 19.3561 7.25832L19.8545 7.2184ZM18.1486 5.69527H16.3077V6.19527H18.1486V5.69527ZM16.5577 5.94527V5.86598H16.0577V5.94527H16.5577ZM16.5577 5.86598C16.5577 3.58626 14.626 1.75 12.2736 1.75V2.25C14.3701 2.25 16.0577 3.88225 16.0577 5.86598H16.5577ZM12.2736 1.75C9.9213 1.75 7.98958 3.58627 7.98958 5.86598H8.48958C8.48958 3.88225 10.1772 2.25 12.2736 2.25V1.75ZM7.98958 5.86598V5.94527H8.48958V5.86598H7.98958ZM8.23958 5.69527H6.39869V6.19527H8.23958V5.69527ZM6.39869 5.69527C5.51868 5.69527 4.76189 6.35447 4.69286 7.21689L5.19127 7.25678C5.23807 6.67201 5.7611 6.19527 6.39869 6.19527V5.69527ZM4.69292 7.21621L3.76071 18.4738L4.25901 18.515L5.19121 7.25747L4.69292 7.21621ZM3.76066 18.4745C3.68266 19.449 4.03547 20.4165 4.72526 21.1301L5.08477 20.7826C4.49246 20.1698 4.19277 19.3426 4.25906 18.5144L3.76066 18.4745ZM4.72524 21.1301C5.41451 21.8433 6.38857 22.25 7.39803 22.25V21.75C6.52066 21.75 5.67744 21.3959 5.08478 20.7826L4.72524 21.1301ZM7.39803 22.25H17.1493V21.75H7.39803V22.25ZM17.1493 22.25C18.1587 22.25 19.1328 21.8433 19.8221 21.1302L19.4626 20.7827C18.8698 21.3959 18.0266 21.75 17.1493 21.75V22.25ZM19.8221 21.1302C20.5119 20.4165 20.8646 19.4489 20.7865 18.473L20.2881 18.5128C20.3545 19.3427 20.0548 20.1699 19.4626 20.7827L19.8221 21.1302ZM9.71199 5.86598C9.71199 4.52823 10.8512 3.42148 12.2736 3.42148V2.92148C10.5954 2.92148 9.21199 4.23224 9.21199 5.86598H9.71199ZM12.2736 3.42148C13.6961 3.42148 14.8353 4.52827 14.8353 5.86598H15.3353C15.3353 4.23228 13.952 2.92148 12.2736 2.92148V3.42148ZM14.8353 5.86598V5.94527H15.3353V5.86598H14.8353ZM15.0853 5.69527H9.46199V6.19527H15.0853V5.69527ZM9.71199 5.94527V5.86598H9.21199V5.94527H9.71199ZM18.5657 19.9866C18.1975 20.3675 17.6961 20.5785 17.1493 20.5785V21.0785C17.8282 21.0785 18.4604 20.815 18.9252 20.3341L18.5657 19.9866ZM17.1493 20.5785H7.39803V21.0785H17.1493V20.5785ZM7.39803 20.5785C6.85119 20.5785 6.34975 20.3675 5.9816 19.9866L5.62207 20.3341C6.08682 20.8149 6.7191 21.0785 7.39803 21.0785V20.5785ZM5.98158 19.9866C5.61376 19.6061 5.43689 19.1163 5.47781 18.6055L4.97941 18.5656C4.92675 19.2229 5.15691 19.8529 5.62208 20.3341L5.98158 19.9866ZM5.47776 18.6062L6.40996 7.3486L5.91167 7.30734L4.97946 18.5649L5.47776 18.6062ZM6.41002 7.34787C6.40923 7.3578 6.40455 7.36338 6.40281 7.36492C6.40117 7.36638 6.39965 7.36676 6.39873 7.36676V6.86676C6.15347 6.86676 5.93214 7.05091 5.91161 7.30807L6.41002 7.34787ZM6.39873 7.36676H8.23962V6.86676H6.39873V7.36676ZM7.98962 7.11676V8.55953H8.48962V7.11676H7.98962ZM7.98962 8.55953C7.98962 9.031 8.38535 9.39527 8.85083 9.39527V8.89527C8.64122 8.89527 8.48962 8.73502 8.48962 8.55953H7.98962ZM8.85083 9.39527C9.3163 9.39527 9.71203 9.031 9.71203 8.55953H9.21203C9.21203 8.73502 9.06043 8.89527 8.85083 8.89527V9.39527ZM9.71203 8.55953V7.11676H9.21203V8.55953H9.71203ZM9.46203 7.36676H15.0854V6.86676H9.46203V7.36676ZM14.8354 7.11676V8.55953H15.3354V7.11676H14.8354ZM14.8354 8.55953C14.8354 9.031 15.2311 9.39527 15.6966 9.39527V8.89527C15.487 8.89527 15.3354 8.73502 15.3354 8.55953H14.8354ZM15.6966 9.39527C16.162 9.39527 16.5578 9.031 16.5578 8.55953H16.0578C16.0578 8.73502 15.9062 8.89527 15.6966 8.89527V9.39527ZM16.5578 8.55953V7.11676H16.0578V8.55953H16.5578ZM16.3078 7.36676H18.1486V6.86676H16.3078V7.36676ZM18.1486 7.36676C18.1476 7.36676 18.1459 7.36632 18.1441 7.36472C18.1421 7.36296 18.1381 7.35778 18.1375 7.34947L18.6359 7.30951C18.6152 7.05199 18.395 6.86676 18.1486 6.86676V7.36676ZM18.1375 7.35012L19.0695 18.6046L19.5678 18.5634L18.6358 7.30886L18.1375 7.35012ZM19.0695 18.6039C19.1104 19.1164 18.9334 19.6061 18.5657 19.9866L18.9252 20.3341C19.3904 19.8527 19.6206 19.2229 19.5679 18.5641L19.0695 18.6039Z"
+                                                fill="white"
+                                            ></path>
+                                        </svg>
+                                    </a>
+                                    <a href="" class="product-item__action-item product-item__action--compared d-none">
+                                        <svg
+                                            aria-hidden="true"
+                                            focusable="false"
+                                            width="35"
+                                            height="35"
+                                            data-prefix="fal"
+                                            data-icon="cog"
+                                            role="img"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 512 512"
+                                            class="svg-inline--fa fa-cog fa-w-16"
+                                            style="
+                                                width: 40px;
+                                                height: 40px;
+                                                background-color: 333333;
+                                                border-radius: 100px;
+                                                padding: 10px;
+                                                color: white;
+                                            "
+                                        >
+                                            <path
+                                                fill="currentColor"
+                                                d="M482.696 299.276l-32.61-18.827a195.168 195.168 0 0 0 0-48.899l32.61-18.827c9.576-5.528 14.195-16.902 11.046-27.501-11.214-37.749-31.175-71.728-57.535-99.595-7.634-8.07-19.817-9.836-29.437-4.282l-32.562 18.798a194.125 194.125 0 0 0-42.339-24.48V38.049c0-11.13-7.652-20.804-18.484-23.367-37.644-8.909-77.118-8.91-114.77 0-10.831 2.563-18.484 12.236-18.484 23.367v37.614a194.101 194.101 0 0 0-42.339 24.48L105.23 81.345c-9.621-5.554-21.804-3.788-29.437 4.282-26.36 27.867-46.321 61.847-57.535 99.595-3.149 10.599 1.47 21.972 11.046 27.501l32.61 18.827a195.168 195.168 0 0 0 0 48.899l-32.61 18.827c-9.576 5.528-14.195 16.902-11.046 27.501 11.214 37.748 31.175 71.728 57.535 99.595 7.634 8.07 19.817 9.836 29.437 4.283l32.562-18.798a194.08 194.08 0 0 0 42.339 24.479v37.614c0 11.13 7.652 20.804 18.484 23.367 37.645 8.909 77.118 8.91 114.77 0 10.831-2.563 18.484-12.236 18.484-23.367v-37.614a194.138 194.138 0 0 0 42.339-24.479l32.562 18.798c9.62 5.554 21.803 3.788 29.437-4.283 26.36-27.867 46.321-61.847 57.535-99.595 3.149-10.599-1.47-21.972-11.046-27.501zm-65.479 100.461l-46.309-26.74c-26.988 23.071-36.559 28.876-71.039 41.059v53.479a217.145 217.145 0 0 1-87.738 0v-53.479c-33.621-11.879-43.355-17.395-71.039-41.059l-46.309 26.74c-19.71-22.09-34.689-47.989-43.929-75.958l46.329-26.74c-6.535-35.417-6.538-46.644 0-82.079l-46.329-26.74c9.24-27.969 24.22-53.869 43.929-75.969l46.309 26.76c27.377-23.434 37.063-29.065 71.039-41.069V44.464a216.79 216.79 0 0 1 87.738 0v53.479c33.978 12.005 43.665 17.637 71.039 41.069l46.309-26.76c19.709 22.099 34.689 47.999 43.929 75.969l-46.329 26.74c6.536 35.426 6.538 46.644 0 82.079l46.329 26.74c-9.24 27.968-24.219 53.868-43.929 75.957zM256 160c-52.935 0-96 43.065-96 96s43.065 96 96 96 96-43.065 96-96-43.065-96-96-96zm0 160c-35.29 0-64-28.71-64-64s28.71-64 64-64 64 28.71 64 64-28.71 64-64 64z"
+                                                class=""
+                                            ></path>
+                                        </svg>
+                                    </a>
+                                    <a href="" class="product-item__action-item product-item__action--wishlist"
+                                        ><i class="fa-regular fa-heart product-item__action-item-icon"></i
+                                    ></a>
+                                </div>
+                            </div>
+                            <div class="product-item__info">
+                                <a href="" class="product-item__name"
+                                    >Dior Addict Lip Tattoo Long-Wear Colored Tint 251 Natural Peach</a
+                                >
+                                <p class="product-item__sum">
+                                    Dior là tên gọi thông dụng của thương hiệu Christian Dior S.A., hãn...
+                                </p>
+                                <div class="product-item__price-wrap">
+                                    <span class="product-item__price">850.000₫</span>
+                                    <span class="product-item__discount">- 14% </span>
+                                    <span class="product-item__old-price">990.000₫</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-xl-3">
+                        <div class="product-item">
+                            <div class="product-item__img-wrap">
+                                <a href="" class="product-item__transition">
+                                    <img
+                                        src="https://bizweb.dktcdn.net/thumb/large/100/445/219/products/s1.jpg?v=1640590559330"
+                                        alt="XTOURING Túi Ghi Đông"
+                                        class="product-item__img-thumbnail"
+                                    />
+                                    <!-- <div class="product-item__img-thumbnail"></div> -->
+                                    <div class="product-item__sale-label d-none">sale</div>
+                                </a>
+                                <div class="product-item__action">
+                                    <a href="" class="product-item__action-item product-item__action--add-cart">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            style="
+                                                width: 40px;
+                                                height: 40px;
+                                                background-color: 333333;
+                                                border-radius: 100px;
+                                                padding: 7px;
+                                            "
+                                        >
+                                            <path
+                                                d="M20.5373 18.4929L19.6053 7.23836C19.5473 6.51328 18.9074 5.94527 18.1486 5.94527H16.3077V5.86598C16.3077 3.73426 14.498 2 12.2736 2C10.0492 2 8.23958 3.73426 8.23958 5.86598V5.94527H6.39869C5.63989 5.94527 4.99998 6.51324 4.94206 7.23684L4.00986 18.4944C3.93772 19.3958 4.26397 20.2932 4.90501 20.9564C5.54598 21.6196 6.45462 22 7.39803 22H17.1493C18.0926 22 19.0013 21.6196 19.6423 20.9564C20.2834 20.2932 20.6096 19.3958 20.5373 18.4929ZM9.46199 5.86598C9.46199 4.38023 10.7233 3.17148 12.2736 3.17148C13.824 3.17148 15.0853 4.38027 15.0853 5.86598V5.94527H9.46199V5.86598ZM18.7454 20.1604C18.3289 20.5913 17.7621 20.8285 17.1493 20.8285H7.39803C6.78515 20.8285 6.21829 20.5912 5.80183 20.1603C5.38534 19.7295 5.18182 19.1696 5.22861 18.5855L6.16081 7.32797C6.17027 7.20953 6.27482 7.11676 6.39873 7.11676H8.23962V8.55953C8.23962 8.88301 8.51329 9.14527 8.85083 9.14527C9.18837 9.14527 9.46203 8.88301 9.46203 8.55953V7.11676H15.0854V8.55953C15.0854 8.88301 15.359 9.14527 15.6966 9.14527C16.0341 9.14527 16.3078 8.88301 16.3078 8.55953V7.11676H18.1486C18.2725 7.11676 18.377 7.20953 18.3867 7.32949L19.3187 18.584C19.3655 19.1696 19.1619 19.7294 18.7454 20.1604Z"
+                                                fill="white"
+                                            ></path>
+                                            <path
+                                                d="M20.5373 18.4929L20.7865 18.473L20.7865 18.4723L20.5373 18.4929ZM19.6053 7.23836L19.3561 7.25832L19.3562 7.25899L19.6053 7.23836ZM16.3077 5.94527H16.0577V6.19527H16.3077V5.94527ZM8.23958 5.94527V6.19527H8.48958V5.94527H8.23958ZM4.94206 7.23684L5.19121 7.25747L5.19127 7.25678L4.94206 7.23684ZM4.00986 18.4944L3.76071 18.4738L3.76066 18.4745L4.00986 18.4944ZM4.90501 20.9564L5.08478 20.7826L5.08477 20.7826L4.90501 20.9564ZM19.6423 20.9564L19.4626 20.7827L19.4626 20.7827L19.6423 20.9564ZM15.0853 5.94527V6.19527H15.3353V5.94527H15.0853ZM9.46199 5.94527H9.21199V6.19527H9.46199V5.94527ZM18.7454 20.1604L18.9252 20.3341L18.9252 20.3341L18.7454 20.1604ZM5.80183 20.1603L5.9816 19.9866L5.98158 19.9866L5.80183 20.1603ZM5.22861 18.5855L4.97946 18.5649L4.97941 18.5656L5.22861 18.5855ZM6.16081 7.32797L6.40996 7.3486L6.41002 7.34787L6.16081 7.32797ZM8.23962 7.11676H8.48962V6.86676H8.23962V7.11676ZM9.46203 7.11676V6.86676H9.21203V7.11676H9.46203ZM15.0854 7.11676H15.3354V6.86676H15.0854V7.11676ZM16.3078 7.11676V6.86676H16.0578V7.11676H16.3078ZM18.3867 7.32949L18.1375 7.34947L18.1375 7.35012L18.3867 7.32949ZM19.3187 18.584L19.5679 18.5641L19.5678 18.5634L19.3187 18.584ZM20.7865 18.4723L19.8545 7.21773L19.3562 7.25899L20.2882 18.5135L20.7865 18.4723ZM19.8545 7.2184C19.7853 6.35469 19.0288 5.69527 18.1486 5.69527V6.19527C18.786 6.19527 19.3092 6.67187 19.3561 7.25832L19.8545 7.2184ZM18.1486 5.69527H16.3077V6.19527H18.1486V5.69527ZM16.5577 5.94527V5.86598H16.0577V5.94527H16.5577ZM16.5577 5.86598C16.5577 3.58626 14.626 1.75 12.2736 1.75V2.25C14.3701 2.25 16.0577 3.88225 16.0577 5.86598H16.5577ZM12.2736 1.75C9.9213 1.75 7.98958 3.58627 7.98958 5.86598H8.48958C8.48958 3.88225 10.1772 2.25 12.2736 2.25V1.75ZM7.98958 5.86598V5.94527H8.48958V5.86598H7.98958ZM8.23958 5.69527H6.39869V6.19527H8.23958V5.69527ZM6.39869 5.69527C5.51868 5.69527 4.76189 6.35447 4.69286 7.21689L5.19127 7.25678C5.23807 6.67201 5.7611 6.19527 6.39869 6.19527V5.69527ZM4.69292 7.21621L3.76071 18.4738L4.25901 18.515L5.19121 7.25747L4.69292 7.21621ZM3.76066 18.4745C3.68266 19.449 4.03547 20.4165 4.72526 21.1301L5.08477 20.7826C4.49246 20.1698 4.19277 19.3426 4.25906 18.5144L3.76066 18.4745ZM4.72524 21.1301C5.41451 21.8433 6.38857 22.25 7.39803 22.25V21.75C6.52066 21.75 5.67744 21.3959 5.08478 20.7826L4.72524 21.1301ZM7.39803 22.25H17.1493V21.75H7.39803V22.25ZM17.1493 22.25C18.1587 22.25 19.1328 21.8433 19.8221 21.1302L19.4626 20.7827C18.8698 21.3959 18.0266 21.75 17.1493 21.75V22.25ZM19.8221 21.1302C20.5119 20.4165 20.8646 19.4489 20.7865 18.473L20.2881 18.5128C20.3545 19.3427 20.0548 20.1699 19.4626 20.7827L19.8221 21.1302ZM9.71199 5.86598C9.71199 4.52823 10.8512 3.42148 12.2736 3.42148V2.92148C10.5954 2.92148 9.21199 4.23224 9.21199 5.86598H9.71199ZM12.2736 3.42148C13.6961 3.42148 14.8353 4.52827 14.8353 5.86598H15.3353C15.3353 4.23228 13.952 2.92148 12.2736 2.92148V3.42148ZM14.8353 5.86598V5.94527H15.3353V5.86598H14.8353ZM15.0853 5.69527H9.46199V6.19527H15.0853V5.69527ZM9.71199 5.94527V5.86598H9.21199V5.94527H9.71199ZM18.5657 19.9866C18.1975 20.3675 17.6961 20.5785 17.1493 20.5785V21.0785C17.8282 21.0785 18.4604 20.815 18.9252 20.3341L18.5657 19.9866ZM17.1493 20.5785H7.39803V21.0785H17.1493V20.5785ZM7.39803 20.5785C6.85119 20.5785 6.34975 20.3675 5.9816 19.9866L5.62207 20.3341C6.08682 20.8149 6.7191 21.0785 7.39803 21.0785V20.5785ZM5.98158 19.9866C5.61376 19.6061 5.43689 19.1163 5.47781 18.6055L4.97941 18.5656C4.92675 19.2229 5.15691 19.8529 5.62208 20.3341L5.98158 19.9866ZM5.47776 18.6062L6.40996 7.3486L5.91167 7.30734L4.97946 18.5649L5.47776 18.6062ZM6.41002 7.34787C6.40923 7.3578 6.40455 7.36338 6.40281 7.36492C6.40117 7.36638 6.39965 7.36676 6.39873 7.36676V6.86676C6.15347 6.86676 5.93214 7.05091 5.91161 7.30807L6.41002 7.34787ZM6.39873 7.36676H8.23962V6.86676H6.39873V7.36676ZM7.98962 7.11676V8.55953H8.48962V7.11676H7.98962ZM7.98962 8.55953C7.98962 9.031 8.38535 9.39527 8.85083 9.39527V8.89527C8.64122 8.89527 8.48962 8.73502 8.48962 8.55953H7.98962ZM8.85083 9.39527C9.3163 9.39527 9.71203 9.031 9.71203 8.55953H9.21203C9.21203 8.73502 9.06043 8.89527 8.85083 8.89527V9.39527ZM9.71203 8.55953V7.11676H9.21203V8.55953H9.71203ZM9.46203 7.36676H15.0854V6.86676H9.46203V7.36676ZM14.8354 7.11676V8.55953H15.3354V7.11676H14.8354ZM14.8354 8.55953C14.8354 9.031 15.2311 9.39527 15.6966 9.39527V8.89527C15.487 8.89527 15.3354 8.73502 15.3354 8.55953H14.8354ZM15.6966 9.39527C16.162 9.39527 16.5578 9.031 16.5578 8.55953H16.0578C16.0578 8.73502 15.9062 8.89527 15.6966 8.89527V9.39527ZM16.5578 8.55953V7.11676H16.0578V8.55953H16.5578ZM16.3078 7.36676H18.1486V6.86676H16.3078V7.36676ZM18.1486 7.36676C18.1476 7.36676 18.1459 7.36632 18.1441 7.36472C18.1421 7.36296 18.1381 7.35778 18.1375 7.34947L18.6359 7.30951C18.6152 7.05199 18.395 6.86676 18.1486 6.86676V7.36676ZM18.1375 7.35012L19.0695 18.6046L19.5678 18.5634L18.6358 7.30886L18.1375 7.35012ZM19.0695 18.6039C19.1104 19.1164 18.9334 19.6061 18.5657 19.9866L18.9252 20.3341C19.3904 19.8527 19.6206 19.2229 19.5679 18.5641L19.0695 18.6039Z"
+                                                fill="white"
+                                            ></path>
+                                        </svg>
+                                    </a>
+                                    <a href="" class="product-item__action-item product-item__action--compared d-none">
+                                        <svg
+                                            aria-hidden="true"
+                                            focusable="false"
+                                            width="35"
+                                            height="35"
+                                            data-prefix="fal"
+                                            data-icon="cog"
+                                            role="img"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 512 512"
+                                            class="svg-inline--fa fa-cog fa-w-16"
+                                            style="
+                                                width: 40px;
+                                                height: 40px;
+                                                background-color: 333333;
+                                                border-radius: 100px;
+                                                padding: 10px;
+                                                color: white;
+                                            "
+                                        >
+                                            <path
+                                                fill="currentColor"
+                                                d="M482.696 299.276l-32.61-18.827a195.168 195.168 0 0 0 0-48.899l32.61-18.827c9.576-5.528 14.195-16.902 11.046-27.501-11.214-37.749-31.175-71.728-57.535-99.595-7.634-8.07-19.817-9.836-29.437-4.282l-32.562 18.798a194.125 194.125 0 0 0-42.339-24.48V38.049c0-11.13-7.652-20.804-18.484-23.367-37.644-8.909-77.118-8.91-114.77 0-10.831 2.563-18.484 12.236-18.484 23.367v37.614a194.101 194.101 0 0 0-42.339 24.48L105.23 81.345c-9.621-5.554-21.804-3.788-29.437 4.282-26.36 27.867-46.321 61.847-57.535 99.595-3.149 10.599 1.47 21.972 11.046 27.501l32.61 18.827a195.168 195.168 0 0 0 0 48.899l-32.61 18.827c-9.576 5.528-14.195 16.902-11.046 27.501 11.214 37.748 31.175 71.728 57.535 99.595 7.634 8.07 19.817 9.836 29.437 4.283l32.562-18.798a194.08 194.08 0 0 0 42.339 24.479v37.614c0 11.13 7.652 20.804 18.484 23.367 37.645 8.909 77.118 8.91 114.77 0 10.831-2.563 18.484-12.236 18.484-23.367v-37.614a194.138 194.138 0 0 0 42.339-24.479l32.562 18.798c9.62 5.554 21.803 3.788 29.437-4.283 26.36-27.867 46.321-61.847 57.535-99.595 3.149-10.599-1.47-21.972-11.046-27.501zm-65.479 100.461l-46.309-26.74c-26.988 23.071-36.559 28.876-71.039 41.059v53.479a217.145 217.145 0 0 1-87.738 0v-53.479c-33.621-11.879-43.355-17.395-71.039-41.059l-46.309 26.74c-19.71-22.09-34.689-47.989-43.929-75.958l46.329-26.74c-6.535-35.417-6.538-46.644 0-82.079l-46.329-26.74c9.24-27.969 24.22-53.869 43.929-75.969l46.309 26.76c27.377-23.434 37.063-29.065 71.039-41.069V44.464a216.79 216.79 0 0 1 87.738 0v53.479c33.978 12.005 43.665 17.637 71.039 41.069l46.309-26.76c19.709 22.099 34.689 47.999 43.929 75.969l-46.329 26.74c6.536 35.426 6.538 46.644 0 82.079l46.329 26.74c-9.24 27.968-24.219 53.868-43.929 75.957zM256 160c-52.935 0-96 43.065-96 96s43.065 96 96 96 96-43.065 96-96-43.065-96-96-96zm0 160c-35.29 0-64-28.71-64-64s28.71-64 64-64 64 28.71 64 64-28.71 64-64 64z"
+                                                class=""
+                                            ></path>
+                                        </svg>
+                                    </a>
+                                    <a href="" class="product-item__action-item product-item__action--wishlist"
+                                        ><i class="fa-regular fa-heart product-item__action-item-icon"></i
+                                    ></a>
+                                </div>
+                            </div>
+                            <div class="product-item__info">
+                                <a href="" class="product-item__name"
+                                    >Dior Addict Lip Tattoo Long-Wear Colored Tint 251 Natural Peach</a
+                                >
+                                <p class="product-item__sum">
+                                    Dior là tên gọi thông dụng của thương hiệu Christian Dior S.A., hãn...
+                                </p>
+                                <div class="product-item__price-wrap">
+                                    <span class="product-item__price">850.000₫</span>
+                                    <span class="product-item__discount">- 14% </span>
+                                    <span class="product-item__old-price">990.000₫</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-xl-3">
+                        <div class="product-item">
+                            <div class="product-item__img-wrap">
+                                <a href="" class="product-item__transition">
+                                    <img
+                                        src="https://bizweb.dktcdn.net/thumb/large/100/445/219/products/s1.jpg?v=1640590559330"
+                                        alt="XTOURING Túi Ghi Đông"
+                                        class="product-item__img-thumbnail"
+                                    />
+                                    <!-- <div class="product-item__img-thumbnail"></div> -->
+                                    <div class="product-item__sale-label d-none">sale</div>
+                                </a>
+                                <div class="product-item__action">
+                                    <a href="" class="product-item__action-item product-item__action--add-cart">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            style="
+                                                width: 40px;
+                                                height: 40px;
+                                                background-color: 333333;
+                                                border-radius: 100px;
+                                                padding: 7px;
+                                            "
+                                        >
+                                            <path
+                                                d="M20.5373 18.4929L19.6053 7.23836C19.5473 6.51328 18.9074 5.94527 18.1486 5.94527H16.3077V5.86598C16.3077 3.73426 14.498 2 12.2736 2C10.0492 2 8.23958 3.73426 8.23958 5.86598V5.94527H6.39869C5.63989 5.94527 4.99998 6.51324 4.94206 7.23684L4.00986 18.4944C3.93772 19.3958 4.26397 20.2932 4.90501 20.9564C5.54598 21.6196 6.45462 22 7.39803 22H17.1493C18.0926 22 19.0013 21.6196 19.6423 20.9564C20.2834 20.2932 20.6096 19.3958 20.5373 18.4929ZM9.46199 5.86598C9.46199 4.38023 10.7233 3.17148 12.2736 3.17148C13.824 3.17148 15.0853 4.38027 15.0853 5.86598V5.94527H9.46199V5.86598ZM18.7454 20.1604C18.3289 20.5913 17.7621 20.8285 17.1493 20.8285H7.39803C6.78515 20.8285 6.21829 20.5912 5.80183 20.1603C5.38534 19.7295 5.18182 19.1696 5.22861 18.5855L6.16081 7.32797C6.17027 7.20953 6.27482 7.11676 6.39873 7.11676H8.23962V8.55953C8.23962 8.88301 8.51329 9.14527 8.85083 9.14527C9.18837 9.14527 9.46203 8.88301 9.46203 8.55953V7.11676H15.0854V8.55953C15.0854 8.88301 15.359 9.14527 15.6966 9.14527C16.0341 9.14527 16.3078 8.88301 16.3078 8.55953V7.11676H18.1486C18.2725 7.11676 18.377 7.20953 18.3867 7.32949L19.3187 18.584C19.3655 19.1696 19.1619 19.7294 18.7454 20.1604Z"
+                                                fill="white"
+                                            ></path>
+                                            <path
+                                                d="M20.5373 18.4929L20.7865 18.473L20.7865 18.4723L20.5373 18.4929ZM19.6053 7.23836L19.3561 7.25832L19.3562 7.25899L19.6053 7.23836ZM16.3077 5.94527H16.0577V6.19527H16.3077V5.94527ZM8.23958 5.94527V6.19527H8.48958V5.94527H8.23958ZM4.94206 7.23684L5.19121 7.25747L5.19127 7.25678L4.94206 7.23684ZM4.00986 18.4944L3.76071 18.4738L3.76066 18.4745L4.00986 18.4944ZM4.90501 20.9564L5.08478 20.7826L5.08477 20.7826L4.90501 20.9564ZM19.6423 20.9564L19.4626 20.7827L19.4626 20.7827L19.6423 20.9564ZM15.0853 5.94527V6.19527H15.3353V5.94527H15.0853ZM9.46199 5.94527H9.21199V6.19527H9.46199V5.94527ZM18.7454 20.1604L18.9252 20.3341L18.9252 20.3341L18.7454 20.1604ZM5.80183 20.1603L5.9816 19.9866L5.98158 19.9866L5.80183 20.1603ZM5.22861 18.5855L4.97946 18.5649L4.97941 18.5656L5.22861 18.5855ZM6.16081 7.32797L6.40996 7.3486L6.41002 7.34787L6.16081 7.32797ZM8.23962 7.11676H8.48962V6.86676H8.23962V7.11676ZM9.46203 7.11676V6.86676H9.21203V7.11676H9.46203ZM15.0854 7.11676H15.3354V6.86676H15.0854V7.11676ZM16.3078 7.11676V6.86676H16.0578V7.11676H16.3078ZM18.3867 7.32949L18.1375 7.34947L18.1375 7.35012L18.3867 7.32949ZM19.3187 18.584L19.5679 18.5641L19.5678 18.5634L19.3187 18.584ZM20.7865 18.4723L19.8545 7.21773L19.3562 7.25899L20.2882 18.5135L20.7865 18.4723ZM19.8545 7.2184C19.7853 6.35469 19.0288 5.69527 18.1486 5.69527V6.19527C18.786 6.19527 19.3092 6.67187 19.3561 7.25832L19.8545 7.2184ZM18.1486 5.69527H16.3077V6.19527H18.1486V5.69527ZM16.5577 5.94527V5.86598H16.0577V5.94527H16.5577ZM16.5577 5.86598C16.5577 3.58626 14.626 1.75 12.2736 1.75V2.25C14.3701 2.25 16.0577 3.88225 16.0577 5.86598H16.5577ZM12.2736 1.75C9.9213 1.75 7.98958 3.58627 7.98958 5.86598H8.48958C8.48958 3.88225 10.1772 2.25 12.2736 2.25V1.75ZM7.98958 5.86598V5.94527H8.48958V5.86598H7.98958ZM8.23958 5.69527H6.39869V6.19527H8.23958V5.69527ZM6.39869 5.69527C5.51868 5.69527 4.76189 6.35447 4.69286 7.21689L5.19127 7.25678C5.23807 6.67201 5.7611 6.19527 6.39869 6.19527V5.69527ZM4.69292 7.21621L3.76071 18.4738L4.25901 18.515L5.19121 7.25747L4.69292 7.21621ZM3.76066 18.4745C3.68266 19.449 4.03547 20.4165 4.72526 21.1301L5.08477 20.7826C4.49246 20.1698 4.19277 19.3426 4.25906 18.5144L3.76066 18.4745ZM4.72524 21.1301C5.41451 21.8433 6.38857 22.25 7.39803 22.25V21.75C6.52066 21.75 5.67744 21.3959 5.08478 20.7826L4.72524 21.1301ZM7.39803 22.25H17.1493V21.75H7.39803V22.25ZM17.1493 22.25C18.1587 22.25 19.1328 21.8433 19.8221 21.1302L19.4626 20.7827C18.8698 21.3959 18.0266 21.75 17.1493 21.75V22.25ZM19.8221 21.1302C20.5119 20.4165 20.8646 19.4489 20.7865 18.473L20.2881 18.5128C20.3545 19.3427 20.0548 20.1699 19.4626 20.7827L19.8221 21.1302ZM9.71199 5.86598C9.71199 4.52823 10.8512 3.42148 12.2736 3.42148V2.92148C10.5954 2.92148 9.21199 4.23224 9.21199 5.86598H9.71199ZM12.2736 3.42148C13.6961 3.42148 14.8353 4.52827 14.8353 5.86598H15.3353C15.3353 4.23228 13.952 2.92148 12.2736 2.92148V3.42148ZM14.8353 5.86598V5.94527H15.3353V5.86598H14.8353ZM15.0853 5.69527H9.46199V6.19527H15.0853V5.69527ZM9.71199 5.94527V5.86598H9.21199V5.94527H9.71199ZM18.5657 19.9866C18.1975 20.3675 17.6961 20.5785 17.1493 20.5785V21.0785C17.8282 21.0785 18.4604 20.815 18.9252 20.3341L18.5657 19.9866ZM17.1493 20.5785H7.39803V21.0785H17.1493V20.5785ZM7.39803 20.5785C6.85119 20.5785 6.34975 20.3675 5.9816 19.9866L5.62207 20.3341C6.08682 20.8149 6.7191 21.0785 7.39803 21.0785V20.5785ZM5.98158 19.9866C5.61376 19.6061 5.43689 19.1163 5.47781 18.6055L4.97941 18.5656C4.92675 19.2229 5.15691 19.8529 5.62208 20.3341L5.98158 19.9866ZM5.47776 18.6062L6.40996 7.3486L5.91167 7.30734L4.97946 18.5649L5.47776 18.6062ZM6.41002 7.34787C6.40923 7.3578 6.40455 7.36338 6.40281 7.36492C6.40117 7.36638 6.39965 7.36676 6.39873 7.36676V6.86676C6.15347 6.86676 5.93214 7.05091 5.91161 7.30807L6.41002 7.34787ZM6.39873 7.36676H8.23962V6.86676H6.39873V7.36676ZM7.98962 7.11676V8.55953H8.48962V7.11676H7.98962ZM7.98962 8.55953C7.98962 9.031 8.38535 9.39527 8.85083 9.39527V8.89527C8.64122 8.89527 8.48962 8.73502 8.48962 8.55953H7.98962ZM8.85083 9.39527C9.3163 9.39527 9.71203 9.031 9.71203 8.55953H9.21203C9.21203 8.73502 9.06043 8.89527 8.85083 8.89527V9.39527ZM9.71203 8.55953V7.11676H9.21203V8.55953H9.71203ZM9.46203 7.36676H15.0854V6.86676H9.46203V7.36676ZM14.8354 7.11676V8.55953H15.3354V7.11676H14.8354ZM14.8354 8.55953C14.8354 9.031 15.2311 9.39527 15.6966 9.39527V8.89527C15.487 8.89527 15.3354 8.73502 15.3354 8.55953H14.8354ZM15.6966 9.39527C16.162 9.39527 16.5578 9.031 16.5578 8.55953H16.0578C16.0578 8.73502 15.9062 8.89527 15.6966 8.89527V9.39527ZM16.5578 8.55953V7.11676H16.0578V8.55953H16.5578ZM16.3078 7.36676H18.1486V6.86676H16.3078V7.36676ZM18.1486 7.36676C18.1476 7.36676 18.1459 7.36632 18.1441 7.36472C18.1421 7.36296 18.1381 7.35778 18.1375 7.34947L18.6359 7.30951C18.6152 7.05199 18.395 6.86676 18.1486 6.86676V7.36676ZM18.1375 7.35012L19.0695 18.6046L19.5678 18.5634L18.6358 7.30886L18.1375 7.35012ZM19.0695 18.6039C19.1104 19.1164 18.9334 19.6061 18.5657 19.9866L18.9252 20.3341C19.3904 19.8527 19.6206 19.2229 19.5679 18.5641L19.0695 18.6039Z"
+                                                fill="white"
+                                            ></path>
+                                        </svg>
+                                    </a>
+                                    <a href="" class="product-item__action-item product-item__action--compared d-none">
+                                        <svg
+                                            aria-hidden="true"
+                                            focusable="false"
+                                            width="35"
+                                            height="35"
+                                            data-prefix="fal"
+                                            data-icon="cog"
+                                            role="img"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 512 512"
+                                            class="svg-inline--fa fa-cog fa-w-16"
+                                            style="
+                                                width: 40px;
+                                                height: 40px;
+                                                background-color: 333333;
+                                                border-radius: 100px;
+                                                padding: 10px;
+                                                color: white;
+                                            "
+                                        >
+                                            <path
+                                                fill="currentColor"
+                                                d="M482.696 299.276l-32.61-18.827a195.168 195.168 0 0 0 0-48.899l32.61-18.827c9.576-5.528 14.195-16.902 11.046-27.501-11.214-37.749-31.175-71.728-57.535-99.595-7.634-8.07-19.817-9.836-29.437-4.282l-32.562 18.798a194.125 194.125 0 0 0-42.339-24.48V38.049c0-11.13-7.652-20.804-18.484-23.367-37.644-8.909-77.118-8.91-114.77 0-10.831 2.563-18.484 12.236-18.484 23.367v37.614a194.101 194.101 0 0 0-42.339 24.48L105.23 81.345c-9.621-5.554-21.804-3.788-29.437 4.282-26.36 27.867-46.321 61.847-57.535 99.595-3.149 10.599 1.47 21.972 11.046 27.501l32.61 18.827a195.168 195.168 0 0 0 0 48.899l-32.61 18.827c-9.576 5.528-14.195 16.902-11.046 27.501 11.214 37.748 31.175 71.728 57.535 99.595 7.634 8.07 19.817 9.836 29.437 4.283l32.562-18.798a194.08 194.08 0 0 0 42.339 24.479v37.614c0 11.13 7.652 20.804 18.484 23.367 37.645 8.909 77.118 8.91 114.77 0 10.831-2.563 18.484-12.236 18.484-23.367v-37.614a194.138 194.138 0 0 0 42.339-24.479l32.562 18.798c9.62 5.554 21.803 3.788 29.437-4.283 26.36-27.867 46.321-61.847 57.535-99.595 3.149-10.599-1.47-21.972-11.046-27.501zm-65.479 100.461l-46.309-26.74c-26.988 23.071-36.559 28.876-71.039 41.059v53.479a217.145 217.145 0 0 1-87.738 0v-53.479c-33.621-11.879-43.355-17.395-71.039-41.059l-46.309 26.74c-19.71-22.09-34.689-47.989-43.929-75.958l46.329-26.74c-6.535-35.417-6.538-46.644 0-82.079l-46.329-26.74c9.24-27.969 24.22-53.869 43.929-75.969l46.309 26.76c27.377-23.434 37.063-29.065 71.039-41.069V44.464a216.79 216.79 0 0 1 87.738 0v53.479c33.978 12.005 43.665 17.637 71.039 41.069l46.309-26.76c19.709 22.099 34.689 47.999 43.929 75.969l-46.329 26.74c6.536 35.426 6.538 46.644 0 82.079l46.329 26.74c-9.24 27.968-24.219 53.868-43.929 75.957zM256 160c-52.935 0-96 43.065-96 96s43.065 96 96 96 96-43.065 96-96-43.065-96-96-96zm0 160c-35.29 0-64-28.71-64-64s28.71-64 64-64 64 28.71 64 64-28.71 64-64 64z"
+                                                class=""
+                                            ></path>
+                                        </svg>
+                                    </a>
+                                    <a href="" class="product-item__action-item product-item__action--wishlist"
+                                        ><i class="fa-regular fa-heart product-item__action-item-icon"></i
+                                    ></a>
+                                </div>
+                            </div>
+                            <div class="product-item__info">
+                                <a href="" class="product-item__name"
+                                    >Dior Addict Lip Tattoo Long-Wear Colored Tint 251 Natural Peach</a
+                                >
+                                <p class="product-item__sum">
+                                    Dior là tên gọi thông dụng của thương hiệu Christian Dior S.A., hãn...
+                                </p>
+                                <div class="product-item__price-wrap">
+                                    <span class="product-item__price">850.000₫</span>
+                                    <span class="product-item__discount">- 14% </span>
+                                    <span class="product-item__old-price">990.000₫</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer index">
+            <div class="top_footer">
+                <div class="section_malchip">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-12">
+                                <h4>Nhận thông tin khuyến mãi từ chúng tôi</h4>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-12">
+                                <div class="mail_footer subscribe">
+                                    <form
+                                        action="//facebook.us7.list-manage.com/subscribe/post?u=97ba6d3ba28239250923925a8&amp;id=4ef3a755a8"
+                                        method="post"
+                                        id="mc-embedded-subscribe-form"
+                                        name="mc-embedded-subscribe-form"
+                                        target="_blank"
+                                    >
+                                        <input
+                                            type="email"
+                                            class="form-control"
+                                            value=""
+                                            placeholder="Nhập địa chỉ email"
+                                            name="EMAIL"
+                                            id="mail"
+                                        />
+                                        <span class="input-group-append subscribe">
+                                            <button
+                                                class="btn btn-default"
+                                                type="submit"
+                                                aria-label="Đăng ký ngay"
+                                                name="subscribe"
+                                            >
+                                                Gửi
+                                            </button>
+                                        </span>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mid_footer_category">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                            <div class="col-item">
+                                <div class="info">
+                                    <h3>Trang điểm</h3>
+                                    <ul>
+                                        <li><a href="/collections/all">Mắt</a><span>,</span></li>
+
+                                        <li><a href="/">Mặt</a><span>,</span></li>
+
+                                        <li><a href="/">Môi</a><span>,</span></li>
+
+                                        <li><a href="/">Chân mày</a><span>,</span></li>
+
+                                        <li><a href="/">Set trang điểm</a><span>,</span></li>
+
+                                        <li><a href="/">Sản phẩm mới nhất</a><span>,</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                            <div class="col-item">
+                                <div class="info">
+                                    <h3>Chăm sóc da</h3>
+                                    <ul>
+                                        <li><a href="/">Làm sạch</a><span>,</span></li>
+
+                                        <li><a href="/">Chăm sóc da khác</a><span>,</span></li>
+
+                                        <li><a href="/">Dưỡng da</a><span>,</span></li>
+
+                                        <li><a href="/">Chăm sóc chuyên sâu</a><span>,</span></li>
+
+                                        <li><a href="/">Mặt nạ</a><span>,</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                            <div class="col-item">
+                                <div class="info">
+                                    <h3>Chăm sóc cơ thể</h3>
+                                    <ul>
+                                        <li><a href="/">Dưỡng móng tay</a><span>,</span></li>
+
+                                        <li><a href="/">Đặc trị cơ thể</a><span>,</span></li>
+
+                                        <li><a href="/">Chăm sóc răng miệng</a><span>,</span></li>
+
+                                        <li><a href="/">Làm sạch</a><span>,</span></li>
+
+                                        <li><a href="/">Dưỡng thể</a><span>,</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                            <div class="col-item">
+                                <div class="info">
+                                    <h3>Dụng cụ làm đẹp</h3>
+                                    <ul>
+                                        <li><a href="/">Chăm sóc móng</a><span>,</span></li>
+
+                                        <li><a href="/">Dành cho mặt</a><span>,</span></li>
+
+                                        <li><a href="/">Cọ trang điểm</a><span>,</span></li>
+
+                                        <li><a href="/">Dụng cụ trang điểm</a><span>,</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="first-footer d-flex">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-12 mr-991 col-contact-footer footer-click">
+                            <h4>
+                                <span>
+                                    Liên hệ với Celah
+                                    <i class="fa" aria-hidden="true">
+                                        <img
+                                            src="//bizweb.dktcdn.net/100/445/219/themes/895999/assets/icon-down.svg?1697789040374"
+                                            alt="Template Celah"
+                                        />
+                                    </i>
+                                </span>
+                            </h4>
+                            <ul>
+                                <li>Tầng 6, Tòa nhà Ladeco, 266 Đội Cấn, Phường Liễu Giai, Quận Ba Đình, TP Hà Nội</li>
+                                <li>
+                                    <a href="mailto:support@sapo.vn">support@sapo.vn</a>
+                                </li>
+                                <li>
+                                    <a class="fone" href="tel:19006750">19006750</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-12 footer-click">
+                            <h4>
+                                <span>
+                                    Chính sách
+                                    <i class="fa" aria-hidden="true">
+                                        <img
+                                            src="//bizweb.dktcdn.net/100/445/219/themes/895999/assets/icon-down.svg?1697789040374"
+                                            alt="Template Celah"
+                                        />
+                                    </i>
+                                </span>
+                            </h4>
+                            <div class="footer-menu toggle-mn-none">
+                                <a href="/" title="Trang chủ" rel="nofollow">Trang chủ</a>
+
+                                <a href="/san-pham-khuyen-mai" title="Sale" rel="nofollow">Sale</a>
+
+                                <a href="/collections/all" title="Sản phẩm" rel="nofollow">Sản phẩm</a>
+
+                                <a href="/trang-diem" title="Trang điểm" rel="nofollow">Trang điểm</a>
+
+                                <a href="/cham-soc-da" title="Chăm sóc da" rel="nofollow">Chăm sóc da</a>
+
+                                <a href="/tin-tuc" title="Tin tức" rel="nofollow">Tin tức</a>
+
+                                <a href="/lien-he" title="Liên hệ" rel="nofollow">Liên hệ</a>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-12 footer-click">
+                            <h4>
+                                <span>
+                                    Đối tác - Liên kết
+                                    <i class="fa" aria-hidden="true">
+                                        <img
+                                            src="//bizweb.dktcdn.net/100/445/219/themes/895999/assets/icon-down.svg?1697789040374"
+                                            alt="Template Celah"
+                                        />
+                                    </i>
+                                </span>
+                            </h4>
+                            <div class="footer-menu toggle-mn-none">
+                                <ul class="list-menu menu_first list-first">
+                                    <li>
+                                        <p>Chính hãng phân phối độc quyền THEFACESHOP tại Việt Nam</p>
+                                    </li>
+                                    <li>
+                                        <p>Đối tác chính hãng của M.O.I cosmetic</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-12 footer-click">
+                            <h4>
+                                <span>
+                                    Phương thức thanh toán
+                                    <i class="fa" aria-hidden="true">
+                                        <img
+                                            src="//bizweb.dktcdn.net/100/445/219/themes/895999/assets/icon-down.svg?1697789040374"
+                                            alt="Template Celah"
+                                        />
+                                    </i>
+                                </span>
+                            </h4>
+                            <div class="payment">
+                                <a href="#" title="Thanh toán">
+                                    <img
+                                        src="//bizweb.dktcdn.net/100/445/219/themes/895999/assets/payment.png?1697789040374"
+                                        alt="Thanh toán"
+                                    />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright d-flex">
+                <div class="container">
+                    <div class="inner">
+                        <div id="copyright">
+                            <div class="wsp">
+                                © Bản quyền thuộc về Awesome Team
+                                <span class="d-sm-inline-block d-none"> | </span>
+                                <span class="opacity1">
+                                    Cung cấp bởi
+                                    <a
+                                        href="https://www.sapo.vn/?utm_campaign=cpn:kho_theme-plm:footer&amp;utm_source=Tu_nhien&amp;utm_medium=referral&amp;utm_content=fm:text_link-km:-sz:&amp;utm_term=&amp;campaign=kho_theme-sapo"
+                                        rel="noopener"
+                                        title="Sapo"
+                                        target="_blank"
+                                        >Sapo</a
+                                    >
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social_fixed">
+                        <a href="#" class="social-button facebook" title="Theo dõi trên Facebook">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                            >
+                                <path
+                                    d="M18.0015 3.00293C9.71849 3.00293 3.00299 9.71843 3.00299 18.0014C3.00299 25.4864 8.48699 31.6904 15.6585 32.8199V22.3379H11.8485V18.0014H15.6585V14.6969C15.6585 10.9349 17.898 8.86043 21.3225 8.86043C22.9635 8.86043 24.6825 9.15293 24.6825 9.15293V12.8414H22.7865C20.9265 12.8414 20.3445 13.9994 20.3445 15.1859V17.9984H24.501L23.8365 22.3349H20.3445V32.8169C27.516 31.6934 33 25.4879 33 18.0014C33 9.71843 26.2845 3.00293 18.0015 3.00293Z"
+                                    fill="#333333"
+                                ></path>
+                            </svg>
+                        </a>
+
+                        <a href="#" class="social-button youtube" title="Theo dõi trên Youtube">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="36"
+                                height="37"
+                                viewBox="0 0 36 37"
+                                fill="none"
+                            >
+                                <path
+                                    d="M32.3895 11.4713C32.0445 10.1843 31.032 9.16876 29.7465 8.82226C27.3975 8.17726 18 8.16676 18 8.16676C18 8.16676 8.60401 8.15626 6.25351 8.77276C4.99351 9.11626 3.95251 10.1543 3.60451 11.4398C2.98501 13.7888 2.97901 18.6608 2.97901 18.6608C2.97901 18.6608 2.97301 23.5568 3.58801 25.8818C3.93301 27.1673 4.94551 28.1828 6.23251 28.5293C8.60551 29.1743 17.9775 29.1848 17.9775 29.1848C17.9775 29.1848 27.375 29.1953 29.724 28.5803C31.008 28.2353 32.025 27.2213 32.3745 25.9358C32.9955 23.5883 33 18.7178 33 18.7178C33 18.7178 33.03 13.8203 32.3895 11.4713ZM14.994 23.1743L15.0015 14.1743L22.812 18.6818L14.994 23.1743Z"
+                                    fill="#333333"
+                                ></path>
+                            </svg>
+                        </a>
+
+                        <a href="#" class="social-button instagram" title="Theo dõi trên Instagram">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="36"
+                                height="37"
+                                viewBox="0 0 36 37"
+                                fill="none"
+                            >
+                                <path
+                                    d="M17.9883 10.6167C13.7336 10.6167 10.2868 14.0651 10.2868 18.3183C10.2868 22.573 13.7336 26.0215 17.9883 26.0215C22.2398 26.0215 25.6899 22.573 25.6899 18.3183C25.6899 14.0651 22.2398 10.6167 17.9883 10.6167ZM17.9883 23.3227C15.2246 23.3227 12.9839 21.082 12.9839 18.3199C12.9839 15.5562 15.2246 13.3171 17.9883 13.3171C20.7521 13.3171 22.9895 15.5562 22.9895 18.3199C22.9895 21.082 20.7521 23.3227 17.9883 23.3227Z"
+                                    fill="#333333"
+                                ></path>
+                                <path
+                                    d="M25.9964 12.1293C26.9883 12.1293 27.7923 11.3253 27.7923 10.3335C27.7923 9.34164 26.9883 8.53761 25.9964 8.53761C25.0046 8.53761 24.2006 9.34164 24.2006 10.3335C24.2006 11.3253 25.0046 12.1293 25.9964 12.1293Z"
+                                    fill="#333333"
+                                ></path>
+                                <path
+                                    d="M32.2054 8.50762C31.424 6.49351 29.8331 4.90089 27.819 4.1229C26.6545 3.68476 25.4234 3.44987 24.1773 3.42321C22.573 3.35324 22.0649 3.33325 17.9967 3.33325C13.9285 3.33325 13.407 3.33325 11.8161 3.42321C10.5733 3.4482 9.34218 3.6831 8.1777 4.1229C6.16193 4.90089 4.57097 6.49351 3.79131 8.50762C3.35318 9.67377 3.11828 10.9032 3.09329 12.1493C3.02166 13.752 3 14.2601 3 18.3299C3 22.3981 3 22.9162 3.09329 24.5105C3.11828 25.7566 3.35318 26.9861 3.79131 28.1539C4.57263 30.1663 6.16359 31.7589 8.17937 32.5386C9.33885 32.9917 10.57 33.2483 11.8194 33.2883C13.4237 33.3582 13.9318 33.3799 18 33.3799C22.0682 33.3799 22.5896 33.3799 24.1806 33.2883C25.425 33.2633 26.6562 33.0267 27.8223 32.5903C29.8364 31.8089 31.4274 30.218 32.2087 28.2039C32.6468 27.0377 32.8817 25.8083 32.9067 24.5622C32.9783 22.9595 33 22.4514 33 18.3816C33 14.3117 33 13.7953 32.9067 12.201C32.8851 10.9382 32.6518 9.68709 32.2054 8.50762ZM30.1763 24.3872C30.1646 25.3468 29.9913 26.298 29.6582 27.1993C29.15 28.5104 28.1155 29.5466 26.8061 30.0497C25.9148 30.3812 24.9752 30.5545 24.024 30.5678C22.4414 30.6411 21.9949 30.6594 17.9367 30.6594C13.8752 30.6594 13.4604 30.6594 11.8477 30.5678C10.8998 30.5562 9.95691 30.3812 9.0673 30.0497C7.75289 29.5483 6.71168 28.5121 6.20358 27.1993C5.87706 26.3097 5.70047 25.3685 5.68547 24.4189C5.61384 22.8363 5.59718 22.3898 5.59718 18.3316C5.59718 14.2717 5.59718 13.8569 5.68547 12.2426C5.69713 11.2831 5.87039 10.3335 6.20358 9.43221C6.71168 8.11779 7.75289 7.08325 9.0673 6.58014C9.95691 6.25029 10.8998 6.07537 11.8477 6.06204C13.432 5.9904 13.8768 5.97041 17.9367 5.97041C21.9966 5.97041 22.413 5.97041 24.024 6.06204C24.9752 6.0737 25.9148 6.24862 26.8061 6.58014C28.1155 7.08492 29.15 8.12112 29.6582 9.43221C29.9847 10.3218 30.1613 11.2631 30.1763 12.2126C30.2479 13.7969 30.2662 14.2417 30.2662 18.3016C30.2662 22.3598 30.2662 22.7963 30.1946 24.3889H30.1763V24.3872Z"
+                                    fill="#333333"
+                                ></path>
+                            </svg>
+                        </a>
+
+                        <a href="#" class="social-button shopee" title="Theo dõi trên Shopee">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                            >
+                                <g clip-path="url(#clip0_11_232)">
+                                    <path
+                                        d="M22.6935 24.1377C22.954 22.0314 21.5791 20.6879 17.95 19.5449C16.1922 18.953 15.3642 18.178 15.3835 17.1095C15.4569 15.9267 16.5737 15.064 18.0547 15.0351C19.0812 15.0554 20.2215 15.3028 21.3303 16.0328C21.4621 16.1147 21.5548 16.1019 21.6297 15.9901C21.7324 15.827 21.9871 15.4358 22.0728 15.2955C22.1308 15.2039 22.142 15.0856 21.9952 14.98C21.785 14.8261 21.1955 14.5146 20.8791 14.3839C20.0192 14.0287 19.0542 13.805 18.0251 13.807C15.8571 13.816 14.1487 15.1695 14.0062 16.9758C13.9129 18.2792 14.5668 19.338 15.9707 20.1451C16.2681 20.3162 17.8787 20.9483 18.5192 21.1451C20.5343 21.7643 21.5806 22.8742 21.3344 24.1683C21.1109 25.3425 19.8592 26.1007 18.1338 26.1238C16.7658 26.0723 15.5348 25.522 14.5802 24.7892C14.556 24.7714 14.4361 24.6797 14.4198 24.6674C14.3018 24.5762 14.173 24.5821 14.0946 24.7001C14.0365 24.7869 13.6676 25.3127 13.5745 25.4508C13.487 25.5723 13.5338 25.6392 13.6247 25.7137C14.0236 26.0418 14.5527 26.4007 14.9136 26.5823C15.9051 27.0812 16.9813 27.3546 18.1262 27.3975C18.8625 27.4468 19.7912 27.2906 20.4841 27.0004C21.7289 26.479 22.5327 25.4375 22.6935 24.1377ZM18.2152 5.5712C15.8661 5.5712 13.9513 7.75618 13.8617 10.4912H22.5687C22.479 7.75618 20.5642 5.5712 18.2152 5.5712ZM27.1334 30.9028L27.0435 30.9036L9.11368 30.9009H9.11327C7.89371 30.8559 6.99692 29.8804 6.87457 28.6692L6.86258 28.451L6.06088 11.0453L6.06099 11.0452C6.05986 11.0321 6.05945 11.0188 6.05945 11.0054C6.05945 10.7246 6.28754 10.4963 6.57086 10.4913L12.2225 10.4912C12.3611 6.87984 14.9911 4.00024 18.2152 4.00024C21.4393 4.00024 24.0693 6.87984 24.2079 10.4912H29.8433H29.8513C30.1392 10.4912 30.3725 10.7213 30.3725 11.0054C30.3725 11.0143 30.3723 11.0231 30.3718 11.0319V11.0322L29.4934 28.5064L29.4854 28.6544C29.3793 29.8806 28.3742 30.8697 27.1334 30.9028Z"
+                                        fill="#FF835B"
+                                    ></path>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_11_232">
+                                        <rect
+                                            width="24.3871"
+                                            height="27"
+                                            fill="white"
+                                            transform="translate(6 4)"
+                                        ></rect>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+
+                        <a href="#" class="backtop" title="Lên đầu trang">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="10"
+                                height="6"
+                                viewBox="0 0 10 6"
+                                fill="none"
+                            >
+                                <path d="M-2.18557e-07 0.5L5 5.5L10 0.5L-2.18557e-07 0.5Z" fill="#333333"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Overlay -->
+        <div class="overlay"></div>
+        <div class="backdrop__body-backdrop___1rvky"></div>
+
+        <!-- Cart nav -->
+        <div id="CartDrawer" class="cart-sidebar">
+            <div class="clearfix cart_heading">
+                <h4 class="cart_title">Giỏ hàng</h4>
+                <div class="cart_btn-close" title="Đóng giỏ hàng">
+                    <svg class="Icon Icon--close" viewBox="0 0 16 14">
+                        <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="drawer__inner">
+                <div id="CartContainer" class="CartSideContainer">
+                    <form action="/cart" method="post" novalidate="" class="cart ajaxcart">
+                        <div class="ajaxcart__inner ajaxcart__inner--has-fixed-footer cart_body items">
+                            <div class="ajaxcart__row">
+                                <div class="ajaxcart__product cart_product" data-line="1">
+                                    <a
+                                        href="/kem-duong-da-chong-lao-hoa-radha-beauty-skincare"
+                                        class="ajaxcart__product-image cart_image"
+                                        title="Kem Dưỡng Da Chống Lão Hóa Radha Beauty Skincare"
+                                        ><img
+                                            width="80"
+                                            height="80"
+                                            src="https://bizweb.dktcdn.net/thumb/compact/100/445/219/products/17.jpg"
+                                            alt="Kem Dưỡng Da Chống Lão Hóa Radha Beauty Skincare"
+                                    /></a>
+                                    <div class="grid__item cart_info">
+                                        <div class="ajaxcart__product-name-wrapper cart_name">
+                                            <a
+                                                href="/kem-duong-da-chong-lao-hoa-radha-beauty-skincare"
+                                                class="ajaxcart__product-name h4"
+                                                title="Kem Dưỡng Da Chống Lão Hóa Radha Beauty Skincare"
+                                                >Kem Dưỡng Da Chống Lão Hóa Radha Beauty Skincare</a
+                                            >
+                                        </div>
+                                        <div class="grid">
+                                            <div class="grid__item one-half cart_select cart_item_name">
+                                                <label class="cart_quantity">Số lượng</label>
+                                                <div class="ajaxcart__qty input-group-btn">
+                                                    <button
+                                                        type="button"
+                                                        class="ajaxcart__qty-adjust ajaxcart__qty--minus items-count"
+                                                        data-id=""
+                                                        data-qty="3"
+                                                        data-line="1"
+                                                        aria-label="-"
+                                                    >
+                                                        -
+                                                    </button>
+                                                    <input
+                                                        type="text"
+                                                        name="updates[]"
+                                                        class="ajaxcart__qty-num number-sidebar"
+                                                        maxlength="3"
+                                                        value="4"
+                                                        min="0"
+                                                        data-id=""
+                                                        data-line="1"
+                                                        aria-label="quantity"
+                                                        pattern="[0-9]*"
+                                                    />
+                                                    <button
+                                                        type="button"
+                                                        class="ajaxcart__qty-adjust ajaxcart__qty--plus items-count"
+                                                        data-id=""
+                                                        data-line="1"
+                                                        data-qty="5"
+                                                        aria-label="+"
+                                                    >
+                                                        +
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="grid__item one-half text-right cart_prices">
+                                                <span class="cart-price">550.000₫</span>
+                                                <a
+                                                    class="cart__btn-remove remove-item-cart ajaxifyCart--remove"
+                                                    href="javascript:;"
+                                                    data-line="1"
+                                                    >Xóa</a
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ajaxcart__row">
+                                <div class="ajaxcart__product cart_product" data-line="2">
+                                    <a
+                                        href="/son-duong-dau-dua-ben-tre-cocoon-5g"
+                                        class="ajaxcart__product-image cart_image"
+                                        title="Son Dưỡng Dầu Dừa Bến Tre Cocoon 5g"
+                                        ><img
+                                            width="80"
+                                            height="80"
+                                            src="https://bizweb.dktcdn.net/thumb/compact/100/445/219/products/15.jpg"
+                                            alt="Son Dưỡng Dầu Dừa Bến Tre Cocoon 5g"
+                                    /></a>
+                                    <div class="grid__item cart_info">
+                                        <div class="ajaxcart__product-name-wrapper cart_name">
+                                            <a
+                                                href="/son-duong-dau-dua-ben-tre-cocoon-5g"
+                                                class="ajaxcart__product-name h4"
+                                                title="Son Dưỡng Dầu Dừa Bến Tre Cocoon 5g"
+                                                >Son Dưỡng Dầu Dừa Bến Tre Cocoon 5g</a
+                                            >
+                                        </div>
+                                        <div class="grid">
+                                            <div class="grid__item one-half cart_select cart_item_name">
+                                                <label class="cart_quantity">Số lượng</label>
+                                                <div class="ajaxcart__qty input-group-btn">
+                                                    <button
+                                                        type="button"
+                                                        class="ajaxcart__qty-adjust ajaxcart__qty--minus items-count"
+                                                        data-id=""
+                                                        data-qty="0"
+                                                        data-line="2"
+                                                        aria-label="-"
+                                                    >
+                                                        -
+                                                    </button>
+                                                    <input
+                                                        type="text"
+                                                        name="updates[]"
+                                                        class="ajaxcart__qty-num number-sidebar"
+                                                        maxlength="3"
+                                                        value="1"
+                                                        min="0"
+                                                        data-id=""
+                                                        data-line="2"
+                                                        aria-label="quantity"
+                                                        pattern="[0-9]*"
+                                                    />
+                                                    <button
+                                                        type="button"
+                                                        class="ajaxcart__qty-adjust ajaxcart__qty--plus items-count"
+                                                        data-id=""
+                                                        data-line="2"
+                                                        data-qty="2"
+                                                        aria-label="+"
+                                                    >
+                                                        +
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="grid__item one-half text-right cart_prices">
+                                                <span class="cart-price">100.000₫</span>
+                                                <a
+                                                    class="cart__btn-remove remove-item-cart ajaxifyCart--remove"
+                                                    href="javascript:;"
+                                                    data-line="2"
+                                                    >Xóa</a
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ajaxcart__footer ajaxcart__footer--fixed cart-footer">
+                            <div class="ajaxcart__subtotal">
+                                <div class="cart__subtotal">
+                                    <div class="cart__col-6">Tổng tiền:</div>
+                                    <div class="text-right cart__totle">
+                                        <span class="total-price">2.300.000₫</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart__btn-proceed-checkout-dt">
+                                <button
+                                    onclick="location.href='/checkout'"
+                                    type="button"
+                                    class="button btn btn-default cart__btn-proceed-checkout"
+                                    id="btn-proceed-checkout"
+                                    title="Thanh toán"
+                                >
+                                    Thanh toán
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap JS and dependencies -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- Link Jquery -->
+        <script src="./assets/libs/jquery/jquery-3.7.0.min.js"></script>
+
+        <!-- Slick carousel -->
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+        ></script>
+        <!-- link javascript -->
+        <script src="./assets/js/home.js"></script>
+        <script src="./assets/js/index.js"></script>
+        <script src="./assets/js/main.js"></script>
+        <script src="./assets/js/countdown.js"></script>
+        <script src="./assets/js/product.js"></script>
+    </body>
+</html>

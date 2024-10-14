@@ -1,5 +1,6 @@
-// slick carrousel
+// slick carousel
 $(document).ready(function () {
+    // Slider chính
     $('.slider-list').slick({
         dots: true,
         infinite: true,
@@ -12,14 +13,41 @@ $(document).ready(function () {
             "<button type='button' class='slick-next pull-right'><i class='fa-solid fa-chevron-right'></i></button>",
     });
 
+    // Slider hiển thị nhiều item
     $('.slick-slider').slick({
-        slidesToShow: 3, // Số lượng item hiển thị
-        slidesToScroll: 1, // Số lượng item sẽ scroll mỗi lần
-        infinite: true, // Vòng lặp
-        dots: true, // Hiển thị dấu chấm điều hướng
-        arrows: false, // Hiển thị mũi tên điều hướng
-        autoplay: true, // Tự động chạy
-        autoplaySpeed: 3000, // Thời gian giữa các lần chuyển slide
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
+    });
+
+    // Slider cho blog
+    $('.slick-blogs').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+        arrows: false,
+        autoplay: false,
         responsive: [
             {
                 breakpoint: 1024,
@@ -64,30 +92,4 @@ $(document).on('click', '.tab_project .li-tab', function (event) {
 
 $(document).on('click', '.nav-tab .tab-link', function (event) {
     showTab(event, '.nav-tab .tab-link', '.tab-container .tab-item');
-});
-
-$('.slick-blogs').slick({
-    slidesToShow: 3, // Số lượng item hiển thị
-    slidesToScroll: 1, // Số lượng item sẽ scroll mỗi lần
-    infinite: true, // Vòng lặp
-    dots: true, // Hiển thị dấu chấm điều hướng
-    arrows: false, // Hiển thị mũi tên điều hướng
-    autoplay: false, // Tự động chạy
-    autoplaySpeed: 3000, // Thời gian giữa các lần chuyển slide
-    responsive: [
-        {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-            },
-        },
-        {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-            },
-        },
-    ],
 });

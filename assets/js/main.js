@@ -349,3 +349,66 @@ $('.section_product .title-links .btn-more-cate').on('click', function (e) {
     $(this).toggleClass('active');
     return false;
 });
+
+// --------------------------------------------------------------------------------------------------------------------------------
+$(document).ready(function () {
+    function activeOption(itemSelector, activeClass) {
+        $(document).on('click', itemSelector, function () {
+            // Bỏ class active của tất cả các item
+            $(itemSelector).removeClass(activeClass);
+
+            // Thêm class active vào item được click
+            $(this).addClass(activeClass);
+        });
+    }
+
+    activeOption('.gallery-thumbnail-item', 'active'); // Kích hoạt chọn màu
+});
+
+$(document).ready(function () {
+    // Khi bấm vào nút tăng
+    $('.ajaxcart__qty--plus').click(function () {
+        let input = $(this).siblings('.ajaxcart__qty-num');
+        let currentValue = parseInt(input.val());
+
+        // Kiểm tra nếu không phải số hoặc nhỏ hơn 1, đặt về 1
+        if (isNaN(currentValue) || currentValue < 1) {
+            currentValue = 1;
+        }
+
+        input.val(currentValue + 1); // Tăng giá trị lên 1
+    });
+
+    // Khi bấm vào nút giảm
+    $('.ajaxcart__qty--minus').click(function () {
+        let input = $(this).siblings('.ajaxcart__qty-num');
+        let currentValue = parseInt(input.val());
+
+        // Kiểm tra nếu không phải số hoặc nhỏ hơn 1, đặt về 1
+        if (isNaN(currentValue) || currentValue < 1) {
+            currentValue = 1;
+        }
+
+        if (currentValue > 1) {
+            // Giảm giá trị xuống 1 nếu giá trị lớn hơn 1
+            input.val(currentValue - 1);
+        }
+    });
+
+    // Khi bấm vào nút đóng giỏ hàng
+    $('.cart_btn-close').click(function () {
+        $('.cart-sidebar').removeClass('active');
+        $('.backdrop__body-backdrop___1rvky').removeClass('active');
+    });
+
+    // Kiểm tra khi người dùng nhập trực tiếp
+    $('.ajaxcart__qty-num').on('input', function () {
+        let input = $(this);
+        let currentValue = parseInt(input.val());
+
+        // Kiểm tra nếu không phải số hoặc nhỏ hơn 1, đặt về 1
+        if (isNaN(currentValue) || currentValue < 1) {
+            input.val(1);
+        }
+    });
+});
