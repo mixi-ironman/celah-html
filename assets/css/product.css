@@ -2370,10 +2370,35 @@
     z-index: -1;
 }
 
+.slick-track {
+    /* padding: 10px 0; */
+    /* background-color: #d4c9c8; */
+}
+
+.slick-list {
+    padding: 10px 0;
+}
+
+.slick-slide {
+    margin-right: 8px !important;
+}
+
+.slick-slide:last-child {
+    margin-right: 0;
+}
+
 .gallery-thumbs .slick-slide {
     transition: border 0.2s ease;
 }
 
 .gallery-thumbs .slick-slide[data-slick-index] {
     border: 2px solid transparent; /* Border mặc định là transparent */
+}
+
+/* mobile & tablet width< 1024*/
+@media only screen and (min-width: 63.9375rem) {
+}
+
+/* mobile width < 768px*/
+@media only screen and (max-width: 767px) {
 }
