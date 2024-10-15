@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Checkout - EGA Bike</title>
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+        <!-- Font-awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- CSS Select2 -->
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <!-- External link css -->
+        <link rel="stylesheet" href="./assets/css/checkout.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-xl-8 p-4">
+                    <div class="">
+                        <!-- <h3 style="color: #2a9dcc; margin-bottom: 20px">CELAH</h3> -->
+                        <img
+                            src="https://bizweb.dktcdn.net/100/445/219/themes/895999/assets/logo.png?1697789040374"
+                            alt=""
+                            class="mb-3"
+                        />
+                    </div>
+                    <div class="row g-4">
+                        <!-- Thông tin người nhận -->
+                        <div class="col-md-12 col-xl-6 main-content__recipient-info">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="main-content__title">
+                                    <span class="main-content__title-icon" style="display: none; margin-right: 8px"
+                                        ><i class="fa-regular fa-address-card"></i></span
+                                    >Thông tin người nhận
+                                </h5>
+                                <a href="#" style="color: #2a9dcc; text-decoration: none"
+                                    ><span><i class="fa-regular fa-circle-user"></i></span> Đăng nhập</a
+                                >
+                            </div>
+                            <form>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email" placeholder="Email" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="fullname" placeholder="Họ và tên" />
+                                </div>
+                                <div class="form-group">
+                                    <input
+                                        type="tel"
+                                        class="form-control"
+                                        id="phone"
+                                        placeholder="Số điện thoại(tùy chọn)"
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="address"
+                                        placeholder="Địa chỉ(tùy chọn)"
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control" id="province" style="font-size: 12px">
+                                        <option value="">Chọn tỉnh/thành phố</option>
+                                        <option value="Hà Nội">Hà Nội</option>
+                                        <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+                                        <option value="Đà Nẵng">Đà Nẵng</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control" id="district" style="font-size: 12px">
+                                        <option value="">Chọn quận/huyện</option>
+                                        <option value="Ba Đình">Ba Đình</option>
+                                        <option value="1">Quận 1</option>
+                                        <option value="Ngũ Hành Sơn">Ngũ Hành Sơn</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control" id="ward" style="font-size: 12px">
+                                        <option value="">Chọn phường/xã</option>
+                                        <option value="Phường 1">Phường 1</option>
+                                        <option value="Phường 2">Phường 2</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <textarea
+                                        class="form-control"
+                                        id="note"
+                                        rows="2"
+                                        placeholder="Ghi chú(tùy chọn)"
+                                    ></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Phương thức thanh toán -->
+                        <div class="col-md-12 col-xl-6 main-content__payment-method">
+                            <h5 class="main-content__title">
+                                <span class="main-content__title-icon" style="display: none; margin-right: 8px"
+                                    ><i class="fa-solid fa-credit-card"></i></span
+                                >Thanh toán
+                            </h5>
+                            <form>
+                                <div
+                                    class="form-check payment-method"
+                                    style="
+                                        border: 1px solid rgb(136, 136, 136, 0.3);
+                                        border-top-right-radius: 5px;
+                                        border-top-left-radius: 5px;
+                                        margin: 0;
+                                        font-size: 16px;
+                                    "
+                                >
+                                    <input
+                                        class="fs-3"
+                                        type="radio"
+                                        name="paymentMethod"
+                                        id="transfer"
+                                        value="transfer"
+                                        style="transform: translateY(1px)"
+                                    />
+                                    <span class="icon-money"><i class="fa-solid fa-money-check-dollar"></i></span>
+                                    <label
+                                        class="form-check-label ms-2"
+                                        style="padding: 15px 8px; width: 100%"
+                                        for="transfer"
+                                        >Chuyển khoản</label
+                                    >
+                                </div>
+                                <div
+                                    class="form-check payment-method"
+                                    style="
+                                        border: 1px solid rgb(136, 136, 136, 0.3);
+                                        margin-top: -1px;
+                                        border-bottom-right-radius: 5px;
+                                        border-bottom-left-radius: 5px;
+                                        font-size: 16px;
+                                    "
+                                >
+                                    <input
+                                        class="fs-3"
+                                        type="radio"
+                                        name="paymentMethod"
+                                        id="cod"
+                                        value="cod"
+                                        checked
+                                        style="transform: translateY(1px)"
+                                    />
+                                    <span class="icon-money"><i class="fa-solid fa-money-check-dollar"></i></span>
+                                    <label
+                                        class="form-check-label ms-2"
+                                        style="padding: 15px 8px; width: 100%"
+                                        for="cod"
+                                        >Thu hộ (COD)</label
+                                    >
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-xl-4 border-start" style="background-color: #fafafa">
+                    <!-- Đơn hàng -->
+                    <div class="order-summary p-3">
+                        <h5 class="order-summary__title pt-0 p-3 border-bottom mb-3">
+                            Đơn hàng (<span class="total-product_cart">9</span> sản phẩm)
+                        </h5>
+                        <div
+                            class="order-summary__list mt-2 border-bottom mb-3"
+                            style="max-height: 396px; overflow: auto; padding: 10px"
+                        >
+                            <div class="order-summary__item d-flex justify-content-between align-items-center mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="position-relative">
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/xtouringhandlebarharness7-1296x-2e3074d3e3ce4641910e26ab1d4619d6.jpg?v=1721783257817"
+                                            alt="Sản phẩm"
+                                            class="mr-2"
+                                            style="
+                                                width: 50px;
+                                                height: 50px;
+                                                object-fit: contain;
+                                                border: 1px solid rgba(136, 136, 136, 0.4);
+                                                border-radius: 5px;
+                                            "
+                                        />
+                                        <span
+                                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+                                            style="background-color: #2a9dcc"
+                                        >
+                                            1
+                                            <span class="visually-hidden">unread messages</span>
+                                        </span>
+                                    </div>
+
+                                    <span
+                                        class="ms-3"
+                                        style="
+                                            max-width: 232px;
+                                            margin: 0;
+                                            display: -webkit-box; /* Sử dụng flexbox để định dạng dòng */
+                                            -webkit-box-orient: vertical; /* Đặt chiều hướng của box thành dọc */
+                                            overflow: hidden; /* Ẩn nội dung bị tràn */
+                                            -webkit-line-clamp: 2; /* Giới hạn số dòng hiển thị là 2 */
+                                            line-clamp: 2;
+                                        "
+                                        >Tên sản phẩm 1 lo sdfd Giới hạn số dòng h Tên sản phẩm 1 lo sdfd Giới hạn số
+                                        dòng h</span
+                                    >
+                                </div>
+                                <span class="" style="margin-left: 15px; color: #888; font-size: 15px">1.000.000₫</span>
+                            </div>
+                            <div class="order-summary__item d-flex justify-content-between align-items-center mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="position-relative">
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/xtouringhandlebarharness7-1296x-2e3074d3e3ce4641910e26ab1d4619d6.jpg?v=1721783257817"
+                                            alt="Sản phẩm"
+                                            class="mr-2"
+                                            style="
+                                                width: 50px;
+                                                height: 50px;
+                                                object-fit: contain;
+                                                border: 1px solid rgba(136, 136, 136, 0.4);
+                                                border-radius: 5px;
+                                            "
+                                        />
+                                        <span
+                                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+                                            style="background-color: #2a9dcc"
+                                        >
+                                            1
+                                            <span class="visually-hidden">unread messages</span>
+                                        </span>
+                                    </div>
+
+                                    <span
+                                        class="ms-3"
+                                        style="
+                                            max-width: 232px;
+                                            margin: 0;
+                                            display: -webkit-box; /* Sử dụng flexbox để định dạng dòng */
+                                            -webkit-box-orient: vertical; /* Đặt chiều hướng của box thành dọc */
+                                            overflow: hidden; /* Ẩn nội dung bị tràn */
+                                            -webkit-line-clamp: 2; /* Giới hạn số dòng hiển thị là 2 */
+                                            line-clamp: 2;
+                                        "
+                                        >Tên sản phẩm 1 lo sdfd Giới hạn số dòng h Tên sản phẩm 1 lo sdfd Giới hạn số
+                                        dòng h</span
+                                    >
+                                </div>
+                                <span class="" style="margin-left: 15px; color: #888; font-size: 15px">1.000.000₫</span>
+                            </div>
+                            <div class="order-summary__item d-flex justify-content-between align-items-center mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="position-relative">
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/xtouringhandlebarharness7-1296x-2e3074d3e3ce4641910e26ab1d4619d6.jpg?v=1721783257817"
+                                            alt="Sản phẩm"
+                                            class="mr-2"
+                                            style="
+                                                width: 50px;
+                                                height: 50px;
+                                                object-fit: contain;
+                                                border: 1px solid rgba(136, 136, 136, 0.4);
+                                                border-radius: 5px;
+                                            "
+                                        />
+                                        <span
+                                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+                                            style="background-color: #2a9dcc"
+                                        >
+                                            1
+                                            <span class="visually-hidden">unread messages</span>
+                                        </span>
+                                    </div>
+
+                                    <span
+                                        class="ms-3"
+                                        style="
+                                            max-width: 232px;
+                                            margin: 0;
+                                            display: -webkit-box; /* Sử dụng flexbox để định dạng dòng */
+                                            -webkit-box-orient: vertical; /* Đặt chiều hướng của box thành dọc */
+                                            overflow: hidden; /* Ẩn nội dung bị tràn */
+                                            -webkit-line-clamp: 2; /* Giới hạn số dòng hiển thị là 2 */
+                                            line-clamp: 2;
+                                        "
+                                        >Tên sản phẩm 1 lo sdfd Giới hạn số dòng h Tên sản phẩm 1 lo sdfd Giới hạn số
+                                        dòng h</span
+                                    >
+                                </div>
+                                <span class="" style="margin-left: 15px; color: #888; font-size: 15px">1.000.000₫</span>
+                            </div>
+                            <div class="order-summary__item d-flex justify-content-between align-items-center mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="position-relative">
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/xtouringhandlebarharness7-1296x-2e3074d3e3ce4641910e26ab1d4619d6.jpg?v=1721783257817"
+                                            alt="Sản phẩm"
+                                            class="mr-2"
+                                            style="
+                                                width: 50px;
+                                                height: 50px;
+                                                object-fit: contain;
+                                                border: 1px solid rgba(136, 136, 136, 0.4);
+                                                border-radius: 5px;
+                                            "
+                                        />
+                                        <span
+                                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+                                            style="background-color: #2a9dcc"
+                                        >
+                                            1
+                                            <span class="visually-hidden">unread messages</span>
+                                        </span>
+                                    </div>
+
+                                    <span
+                                        class="ms-3"
+                                        style="
+                                            max-width: 232px;
+                                            margin: 0;
+                                            display: -webkit-box; /* Sử dụng flexbox để định dạng dòng */
+                                            -webkit-box-orient: vertical; /* Đặt chiều hướng của box thành dọc */
+                                            overflow: hidden; /* Ẩn nội dung bị tràn */
+                                            -webkit-line-clamp: 2; /* Giới hạn số dòng hiển thị là 2 */
+                                            line-clamp: 2;
+                                        "
+                                        >Tên sản phẩm 1 lo sdfd Giới hạn số dòng h Tên sản phẩm 1 lo sdfd Giới hạn số
+                                        dòng h</span
+                                    >
+                                </div>
+                                <span class="" style="margin-left: 15px; color: #888; font-size: 15px">1.000.000₫</span>
+                            </div>
+                            <div class="order-summary__item d-flex justify-content-between align-items-center mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="position-relative">
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/xtouringhandlebarharness7-1296x-2e3074d3e3ce4641910e26ab1d4619d6.jpg?v=1721783257817"
+                                            alt="Sản phẩm"
+                                            class="mr-2"
+                                            style="
+                                                width: 50px;
+                                                height: 50px;
+                                                object-fit: contain;
+                                                border: 1px solid rgba(136, 136, 136, 0.4);
+                                                border-radius: 5px;
+                                            "
+                                        />
+                                        <span
+                                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+                                            style="background-color: #2a9dcc"
+                                        >
+                                            1
+                                            <span class="visually-hidden">unread messages</span>
+                                        </span>
+                                    </div>
+
+                                    <span
+                                        class="ms-3"
+                                        style="
+                                            max-width: 232px;
+                                            margin: 0;
+                                            display: -webkit-box; /* Sử dụng flexbox để định dạng dòng */
+                                            -webkit-box-orient: vertical; /* Đặt chiều hướng của box thành dọc */
+                                            overflow: hidden; /* Ẩn nội dung bị tràn */
+                                            -webkit-line-clamp: 2; /* Giới hạn số dòng hiển thị là 2 */
+                                            line-clamp: 2;
+                                        "
+                                        >Tên sản phẩm 1 lo sdfd Giới hạn số dòng h Tên sản phẩm 1 lo sdfd Giới hạn số
+                                        dòng h</span
+                                    >
+                                </div>
+                                <span class="" style="margin-left: 15px; color: #888; font-size: 15px">1.000.000₫</span>
+                            </div>
+                            <div class="order-summary__item d-flex justify-content-between align-items-center mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="position-relative">
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/xtouringhandlebarharness7-1296x-2e3074d3e3ce4641910e26ab1d4619d6.jpg?v=1721783257817"
+                                            alt="Sản phẩm"
+                                            class="mr-2"
+                                            style="
+                                                width: 50px;
+                                                height: 50px;
+                                                object-fit: contain;
+                                                border: 1px solid rgba(136, 136, 136, 0.4);
+                                                border-radius: 5px;
+                                            "
+                                        />
+                                        <span
+                                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+                                            style="background-color: #2a9dcc"
+                                        >
+                                            1
+                                            <span class="visually-hidden">unread messages</span>
+                                        </span>
+                                    </div>
+
+                                    <span
+                                        class="ms-3"
+                                        style="
+                                            max-width: 232px;
+                                            margin: 0;
+                                            display: -webkit-box; /* Sử dụng flexbox để định dạng dòng */
+                                            -webkit-box-orient: vertical; /* Đặt chiều hướng của box thành dọc */
+                                            overflow: hidden; /* Ẩn nội dung bị tràn */
+                                            -webkit-line-clamp: 2; /* Giới hạn số dòng hiển thị là 2 */
+                                            line-clamp: 2;
+                                        "
+                                        >Tên sản phẩm 1 lo sdfd Giới hạn số dòng h Tên sản phẩm 1 lo sdfd Giới hạn số
+                                        dòng h</span
+                                    >
+                                </div>
+                                <span class="" style="margin-left: 15px; color: #888; font-size: 15px">1.000.000₫</span>
+                            </div>
+                            <div class="order-summary__item d-flex justify-content-between align-items-center mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="position-relative">
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/xtouringhandlebarharness7-1296x-2e3074d3e3ce4641910e26ab1d4619d6.jpg?v=1721783257817"
+                                            alt="Sản phẩm"
+                                            class="mr-2"
+                                            style="
+                                                width: 50px;
+                                                height: 50px;
+                                                object-fit: contain;
+                                                border: 1px solid rgba(136, 136, 136, 0.4);
+                                                border-radius: 5px;
+                                            "
+                                        />
+                                        <span
+                                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+                                            style="background-color: #2a9dcc"
+                                        >
+                                            1
+                                            <span class="visually-hidden">unread messages</span>
+                                        </span>
+                                    </div>
+
+                                    <span
+                                        class="ms-3"
+                                        style="
+                                            max-width: 232px;
+                                            margin: 0;
+                                            display: -webkit-box; /* Sử dụng flexbox để định dạng dòng */
+                                            -webkit-box-orient: vertical; /* Đặt chiều hướng của box thành dọc */
+                                            overflow: hidden; /* Ẩn nội dung bị tràn */
+                                            -webkit-line-clamp: 2; /* Giới hạn số dòng hiển thị là 2 */
+                                            line-clamp: 2;
+                                        "
+                                        >Tên sản phẩm 1 lo sdfd Giới hạn số dòng h Tên sản phẩm 1 lo sdfd Giới hạn số
+                                        dòng h</span
+                                    >
+                                </div>
+                                <span class="" style="margin-left: 15px; color: #888; font-size: 15px">1.000.000₫</span>
+                            </div>
+                            <div class="order-summary__item d-flex justify-content-between align-items-center mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="position-relative">
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/xtouringhandlebarharness7-1296x-2e3074d3e3ce4641910e26ab1d4619d6.jpg?v=1721783257817"
+                                            alt="Sản phẩm"
+                                            class="mr-2"
+                                            style="
+                                                width: 50px;
+                                                height: 50px;
+                                                object-fit: contain;
+                                                border: 1px solid rgba(136, 136, 136, 0.4);
+                                                border-radius: 5px;
+                                            "
+                                        />
+                                        <span
+                                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+                                            style="background-color: #2a9dcc"
+                                        >
+                                            1
+                                            <span class="visually-hidden">unread messages</span>
+                                        </span>
+                                    </div>
+
+                                    <span
+                                        class="ms-3"
+                                        style="
+                                            max-width: 232px;
+                                            margin: 0;
+                                            display: -webkit-box; /* Sử dụng flexbox để định dạng dòng */
+                                            -webkit-box-orient: vertical; /* Đặt chiều hướng của box thành dọc */
+                                            overflow: hidden; /* Ẩn nội dung bị tràn */
+                                            -webkit-line-clamp: 2; /* Giới hạn số dòng hiển thị là 2 */
+                                            line-clamp: 2;
+                                        "
+                                        >Tên sản phẩm 1 lo sdfd Giới hạn số dòng h Tên sản phẩm 1 lo sdfd Giới hạn số
+                                        dòng h</span
+                                    >
+                                </div>
+                                <span class="" style="margin-left: 15px; color: #888; font-size: 15px">1.000.000₫</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group d-flex justify-content-between align-items-center">
+                            <input type="text" class="form-control" style="flex: 1" placeholder="Nhập mã giảm giá" />
+                            <button
+                                type="button"
+                                class="btn btn-primary"
+                                style="
+                                    width: 120px;
+                                    margin-left: 10px;
+                                    background-color: #2a9dcc;
+                                    outline: none;
+                                    border: none;
+                                    padding: 10px 0;
+                                    transform: translateY(-1px);
+                                "
+                            >
+                                Áp dụng
+                            </button>
+                        </div>
+
+                        <div class="d-flex justify-content-between border-top p-3">
+                            <p class="m-0">Tạm tính:</p>
+                            <span>1.500.000₫</span>
+                        </div>
+                        <div class="d-flex justify-content-between border-top p-3">
+                            <h5 style="font-size: 18px">Tổng cộng:</h5>
+                            <span>1.500.000₫</span>
+                        </div>
+
+                        <div class="checkout-action_wrap d-flex justify-content-between align-items-center mt-2">
+                            <a
+                                href="./cart-detail.html"
+                                style="text-decoration: none; font-size: 14px; font-weight: 400"
+                                ><span calss="d-inline-block"
+                                    ><i
+                                        class="fa-solid fa-chevron-left me-1"
+                                        style="transform: translateY(1px)"
+                                    ></i></span
+                                >Quay về giỏ hàng</a
+                            >
+                            <button
+                                type="button"
+                                class="checkout-action_btn btn btn-danger text-right"
+                                style="width: 150px"
+                            >
+                                Đặt hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap JS and dependencies -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
+        <!-- Link Jquery -->
+        <script src="./assets/libs/jquery/jquery-3.7.0.min.js"></script>
+        <!-- JS Select2 -->
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#province').select2({
+                    placeholder: 'Select an option',
+                    allowClear: true,
+                });
+            });
+        </script>
+    </body>
+</html>
