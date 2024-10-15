@@ -57,3 +57,21 @@
 /* tablet width >= 768px and with < 1024px */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 }
+
+/* custom lại select2 */
+.select2-container--default .select2-selection--single {
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    height: 39px;
+    font-size: 15px;
+}
+
+.select2-selection__rendered,
+.select2-selection__clear {
+    line-height: 36px !important;
+}
+
+.select2-selection__arrow {
+    height: 36px !important;
+}
