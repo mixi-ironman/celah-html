@@ -460,3 +460,44 @@ $(function () {
     $('#start input').val(formatVND($('#slider-3').slider('values', 0)));
     $('#stop input').val(formatVND($('#slider-3').slider('values', 1)));
 });
+
+// Custom lightbox
+$(document).ready(function () {
+    // Initialize Fancybox with custom settings
+    $('[data-fancybox="gallery"]').fancybox({
+        loop: false,
+        transitionEffect: 'slide', // Hiệu ứng chuyển đổi
+        protect: true, // Bảo vệ hình ảnh (ngăn tải xuống chuột phải)
+        animationEffect: 'zoom', // Hiệu ứng zoom khi mở/đóng hình ảnh
+        slideShow: {
+            autoStart: false, // Không bắt đầu slideshow tự động
+            speed: 3000, // Tốc độ chuyển đổi giữa các slide
+        },
+        thumbs: {
+            autoStart: false, // Không tự động mở chế độ thumbnail
+        },
+        buttons: ['zoom', 'fullScreen', 'thumbs', 'close', 'download', 'rotateCCW', 'rotateCW', 'share'], // Thêm các nút điều khiển
+        btnTpl: {
+            // Nút 'Download' tùy chỉnh
+            download:
+                '<button data-fancybox-download class="fancybox-button fancybox-button--download" title="Download">' +
+                '<i class="fas fa-download"></i>' +
+                '</button>',
+        },
+        toolbar: true, // Hiển thị thanh công cụ
+        smallBtn: 'auto', // Nút đóng nhỏ ở góc
+        idleTime: 3, // Thời gian nhàn rỗi trước khi ẩn thanh công cụ
+        afterLoad: function (instance, current) {
+            console.info('Image has loaded:', current.src);
+        },
+        // Xử lý sự kiện khi click vào nút tùy chỉnh
+        onInit: function (instance) {
+            // Nút download tùy chỉnh
+            instance.$refs.container.on('click', '[data-fancybox-download]', function () {
+                const currentImageSrc = instance.current.src;
+                // Xử lý download
+                window.open(currentImageSrc, '_blank');
+            });
+        },
+    });
+});
