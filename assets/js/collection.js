@@ -106,22 +106,22 @@ function doSearch(page, options) {
                 e.preventDefault();
                 var $this = $(this);
                 var form = $this.parents('form');
-                $.ajax({
-                    type: 'POST',
-                    url: '/cart/add.js',
-                    async: false,
-                    data: form.serialize(),
-                    dataType: 'json',
-                    beforeSend: function () {},
-                    success: function (line_item) {
-                        $('.cart-popup-name')
-                            .html(line_item.title)
-                            .attr('href', line_item.url, 'title', line_item.title);
-                        ajaxCart.load();
-                        $('#popup-cart-desktops, .cart-sidebar, .backdrop__body-backdrop___1rvky').addClass('active');
-                    },
-                    cache: false,
-                });
+                // $.ajax({
+                //     type: 'POST',
+                //     url: '/cart/add.js',
+                //     async: false,
+                //     data: form.serialize(),
+                //     dataType: 'json',
+                //     beforeSend: function () {},
+                //     success: function (line_item) {
+                //         $('.cart-popup-name')
+                //             .html(line_item.title)
+                //             .attr('href', line_item.url, 'title', line_item.title);
+                //         ajaxCart.load();
+                //         $('#popup-cart-desktops, .cart-sidebar, .backdrop__body-backdrop___1rvky').addClass('active');
+                //     },
+                //     cache: false,
+                // });
             });
             $('html, body').animate(
                 {
@@ -467,12 +467,12 @@ $(document).ready(function () {
         });
     }
 
-    $('.open-filters').click(function (e) {
-        e.stopPropagation();
-        $(this).toggleClass('openf');
-        $('.left-content').toggleClass('openf');
-        $('.backdrop__body-backdrop___1rvky').toggleClass('active');
-    });
+    // $('.open-filters').click(function (e) {
+    //     e.stopPropagation();
+    //     $(this).toggleClass('openf');
+    //     $('.left-content').toggleClass('openf');
+    //     $('.backdrop__body-backdrop___1rvky').toggleClass('active');
+    // });
 
     $('.filter-group li.filter-item label, .backdrop__body-backdrop___1rvky').click(function () {
         $('.left-content').removeClass('openf');
@@ -480,3 +480,10 @@ $(document).ready(function () {
         $('.backdrop__body-backdrop___1rvky').removeClass('active');
     });
 });
+
+function toggleFilters(e) {
+    e.stopPropagation(); // Ngăn chặn sự kiện click lan ra ngoài
+    $('.open-filters').toggleClass('openf'); // Toggle class 'openf' cho button
+    $('.left-content').toggleClass('openf'); // Toggle class 'openf' cho .left-content
+    $('.backdrop__body-backdrop___1rvky').toggleClass('active'); // Toggle class 'active' cho backdrop
+}
