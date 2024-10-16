@@ -1,0 +1,268 @@
+@keyframes placeHolderShimmer {
+    0% {
+        background-position: -468px 0;
+    }
+
+    100% {
+        background-position: 468px 0;
+    }
+}
+
+.animated-background {
+    animation-duration: 1.25s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f6f6;
+    background: linear-gradient(to right, #f6f6f6 8%, #f0f0f0 18%, #f6f6f6 33%);
+    background-size: 700px 104px;
+    position: relative;
+}
+
+.page-contacts .form_content {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 113px 0;
+    margin-bottom: 80px;
+}
+
+.page-contacts .contact-maps {
+    margin-bottom: 40px;
+}
+
+.page-contacts .contact-maps iframe {
+    width: 100%;
+    height: 500px;
+}
+
+.page-contacts .title-lhct {
+    font-size: 30px;
+    color: #544f4f;
+    text-align: center;
+    line-height: 36.57px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 991px) {
+    .page-contacts .title-lhct {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 991px) and (max-width: 767px) {
+    .page-contacts .title-lhct {
+        font-size: 20px;
+    }
+}
+
+.page-contacts .title-contact-map {
+    font-size: 24px;
+    line-height: 29.26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: #544f4f;
+    margin-bottom: 30px;
+}
+
+.page-contacts .leave-your-message {
+    padding-bottom: 80px;
+}
+
+@media (max-width: 991px) {
+    .page-contacts .leave-your-message {
+        margin-bottom: 15px;
+        padding: 50px 10px;
+    }
+}
+
+.page-contacts .leave-your-message h3 {
+    font-size: 24px;
+    margin: 0;
+    font-weight: 700;
+    color: #333;
+    text-transform: none;
+    line-height: normal;
+}
+
+@media (max-width: 991px) {
+    .page-contacts .leave-your-message h3 {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .page-contacts .leave-your-message h3 {
+        font-size: 20px;
+    }
+}
+
+.page-contacts .leave-your-message .hoa {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 991px) {
+    .page-contacts .leave-your-message .contact_info_right {
+        margin-top: 30px;
+    }
+}
+
+@media (min-width: 992px) {
+    .page-contacts .leave-your-message .contact_info_right {
+        padding-left: 150px;
+        position: relative;
+    }
+
+    .page-contacts .leave-your-message .contact_info_right:before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 165px;
+        top: 8px;
+        left: 12%;
+        background: #777;
+    }
+}
+
+@media (min-width: 992px) and (min-width: 992px) and (max-width: 1199px) {
+    .page-contacts .leave-your-message .contact_info_right {
+        padding-left: 130px;
+    }
+}
+
+.page-contacts .leave-your-message .p-bottom {
+    color: #333;
+    margin: 10px 0 20px;
+    font-size: 14px;
+    line-height: normal;
+}
+
+.page-contacts .leave-your-message .form-group {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+    .page-contacts .leave-your-message .form-group {
+        margin-bottom: 5px;
+    }
+}
+
+.page-contacts .leave-your-message .form-group .form-control {
+    border: 1px solid transparent;
+    background: #fff;
+    color: #333;
+    font-size: 14px;
+    font-style: initial;
+    border-radius: 5px;
+    border-color: transparent !important;
+}
+
+.page-contacts .leave-your-message .contact-box {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.page-contacts .leave-your-message .contact-box p {
+    margin-bottom: 15px;
+    position: relative;
+    color: #787878;
+}
+
+.page-contacts .leave-your-message .contact-box p strong {
+    font-weight: 700;
+    color: #000;
+}
+
+.page-contacts .leave-your-message .contact-box a {
+    color: #787878;
+}
+
+.page-contacts .leave-your-message .contact-box a:hover,
+.page-contacts .leave-your-message .contact-box a:focus {
+    color: #ff835b;
+}
+
+.page-contacts #contact {
+    margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .page-contacts #contact {
+        margin-top: 20px;
+    }
+}
+
+.page-contacts #contact .form-group label {
+    font-weight: 400;
+    color: #333;
+}
+
+.page-contacts #contact button {
+    font-size: 14px;
+    border-radius: 5px;
+    padding: initial;
+    font-weight: bold;
+    background: #000;
+    border-color: #000;
+    width: 180px;
+    height: 41px;
+    text-transform: initial;
+    font-weight: 700;
+}
+
+.page-contacts #contact button:hover {
+    background: #ff835b;
+    border-color: #ff835b;
+}
+
+.page-contacts .title-contact-page {
+    margin-top: 35px;
+    font-size: 16px;
+    line-height: 19.5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #544f4f;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 991px) {
+    .page-contacts .title-contact-page {
+        padding-left: 75px;
+    }
+}
+
+@media (max-width: 767px) {
+    .page-contacts .title-contact-page {
+        margin-bottom: 15px;
+    }
+}
+
+.page-contacts .contact-page {
+    padding: 0;
+}
+
+.page-contacts .contact-page li {
+    position: relative;
+    padding-left: 0px;
+    line-height: normal;
+    margin-bottom: 16px;
+}
+
+.page-contacts .contact-page li .fone:hover {
+    color: #ff835b;
+}
+
+.grecaptcha-badge {
+    display: none !important;
+}
+
+.form-group .form-control {
+    border: 1px solid transparent;
+    background: #fff;
+    color: #333;
+}

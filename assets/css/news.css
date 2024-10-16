@@ -1,0 +1,111 @@
+.news-article {
+}
+
+.news-article__sidebar {
+}
+.news-article-sidebar__title {
+    font-size: 18px;
+}
+.news-article-sidebar__list {
+    margin-top: 10px;
+    /* background-color: aliceblue; */
+}
+.news-article-sidebar__item {
+}
+.news-article-sidebar__link {
+    font-size: 16px;
+    display: inline-block;
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.news-article-sidebar__link:hover {
+    background-color: rgba(176, 173, 173, 0.1);
+}
+
+/* Blog */
+
+.blog-container {
+    margin-top: 50px;
+}
+.blog__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blog-item {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgb(136, 136, 136, 0.2);
+    padding: 4px 10px;
+    border-radius: 3px;
+}
+
+.blog-item__img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.blog-item__content {
+    margin-top: 10px;
+}
+
+.blog-item__title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+.blog-item__text {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.btn-read_more {
+    text-decoration: none;
+    color: #888;
+    transition: color 0.3s ease;
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+/* mobile & tablet width< 1024*/
+@media only screen and (max-width: 63.9375rem) {
+    .news-article__sidebar {
+        display: none !important;
+    }
+
+    .news-article__sidebar-mobile {
+        display: block !important;
+        margin-bottom: 15px;
+    }
+    .news-article-sidebar__title {
+        font-size: 18px !important;
+        font-weight: 600;
+    }
+    .news-article__sidebar {
+        margin-bottom: 25px;
+    }
+
+    .product-section__heading {
+        margin-bottom: 15px;
+    }
+
+    .news-article-sidebar__list {
+        max-height: 222px;
+        overflow: auto;
+    }
+}
+
+/* mobile width < 768px*/
+@media only screen and (max-width: 767px) {
+}
+
+/* tablet width >= 768px and with < 1024px */
+@media screen and(min-width: 768px) and (max-width: 1023px) {
+}

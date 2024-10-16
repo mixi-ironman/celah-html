@@ -12,10 +12,10 @@ $(document).ready(function ($) {
     });
 
     // Mở hoặc đóng giỏ hàng khi click vào '.cart-drop'
-    $('.cart-drop').click(function () {
-        $('#CartDrawer').toggleClass('active');
+    $('.cart-drop').click(function (e) {
+        e.preventDefault();
+        $('.cart-sidebar').toggleClass('active');
         $('.backdrop__body-backdrop___1rvky').toggleClass('active');
-        $(this).toggleClass('active');
     });
 
     // Đóng giỏ hàng khi click ra ngoài
@@ -208,22 +208,22 @@ $(document).on('keydown', '#qty, #quantity-detail, .number-sidebar, .number-phon
         (35 <= e.keyCode && 40 >= e.keyCode) ||
         ((e.shiftKey || 48 > e.keyCode || 57 < e.keyCode) && (96 > e.keyCode || 105 < e.keyCode) && e.preventDefault());
 });
-var buy_now = function (id) {
-    var quantity = 1;
-    var params = {
-        type: 'POST',
-        url: '/cart/add.js',
-        data: 'quantity=' + quantity + '&variantId=' + id,
-        dataType: 'json',
-        success: function (line_item) {
-            window.location = '/checkout';
-        },
-        error: function (XMLHttpRequest, textStatus) {
-            Bizweb.onError(XMLHttpRequest, textStatus);
-        },
-    };
-    jQuery.ajax(params);
-};
+// var buy_now = function (id) {
+//     var quantity = 1;
+//     var params = {
+//         type: 'POST',
+//         url: '/cart/add.js',
+//         data: 'quantity=' + quantity + '&variantId=' + id,
+//         dataType: 'json',
+//         success: function (line_item) {
+//             window.location = '/checkout';
+//         },
+//         error: function (XMLHttpRequest, textStatus) {
+//             Bizweb.onError(XMLHttpRequest, textStatus);
+//         },
+//     };
+//     jQuery.ajax(params);
+// };
 
 var SuccessNoti = function (SuccessText) {
     $.notify(
@@ -412,16 +412,16 @@ $(document).ready(function () {
         }
     });
 
-    $(function () {
-        $('#slider').slider({
-            value: 50, // giá trị ban đầu
-            min: 0,
-            max: 100,
-            slide: function (event, ui) {
-                $('#slider-value').text(ui.value); // Cập nhật giá trị
-            },
-        });
-    });
+    // $(function () {
+    //     $('#slider').slider({
+    //         value: 50, // giá trị ban đầu
+    //         min: 0,
+    //         max: 100,
+    //         slide: function (event, ui) {
+    //             $('#slider-value').text(ui.value); // Cập nhật giá trị
+    //         },
+    //     });
+    // });
 
     // $(document).ready(function () {
     $('.slick-tags').slick({
@@ -444,21 +444,21 @@ $(function () {
         return number.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
     }
 
-    $('#slider-3').slider({
-        range: true,
-        min: 0,
-        max: 10000000,
-        values: [0, 10000000],
-        slide: function (event, ui) {
-            // Sử dụng hàm format để định dạng giá trị VND
-            $('#start input').val(formatVND(ui.values[0]));
-            $('#stop input').val(formatVND(ui.values[1]));
-        },
-    });
+    // $('#slider-3').slider({
+    //     range: true,
+    //     min: 0,
+    //     max: 10000000,
+    //     values: [0, 10000000],
+    //     slide: function (event, ui) {
+    //         // Sử dụng hàm format để định dạng giá trị VND
+    //         $('#start input').val(formatVND(ui.values[0]));
+    //         $('#stop input').val(formatVND(ui.values[1]));
+    //     },
+    // });
 
-    // Khởi tạo giá trị ban đầu với định dạng VND
-    $('#start input').val(formatVND($('#slider-3').slider('values', 0)));
-    $('#stop input').val(formatVND($('#slider-3').slider('values', 1)));
+    // // Khởi tạo giá trị ban đầu với định dạng VND
+    // $('#start input').val(formatVND($('#slider-3').slider('values', 0)));
+    // $('#stop input').val(formatVND($('#slider-3').slider('values', 1)));
 });
 
 // Custom lightbox
@@ -500,4 +500,51 @@ $(document).ready(function () {
             });
         },
     });
+});
+
+//click sản phẩm yêu thích
+// function toggleClass(element, ...classNames) {
+//     classNames.forEach((className) => {
+//         $(element).toggleClass(className);
+//     });
+// }
+
+// $(document).ready(function () {
+//     $('.product-item__action--wishlist').click(function (event) {
+//         event.preventDefault();
+//         toggleClass, '');
+//         // toggleClass(($(this), 'class1', 'class2', 'class3');
+//     });
+// });
+
+$(document).ready(function () {
+    function handleWishlistToggle(itemSelector, activeClass) {
+        $(document).on('click', itemSelector, function (e) {
+            e.preventDefault();
+
+            // Kiểm tra và toggle class 'active'
+            const isActive = $(this).toggleClass(activeClass).hasClass(activeClass);
+
+            // Cập nhật nội dung popup dựa vào trạng thái active
+            const message = isActive ? 'Đã thêm sản phẩm vào mục yêu thích' : 'Đã bỏ sản phẩm khỏi mục yêu thích';
+            $('#wishlist-message').text(message);
+
+            // Hiển thị và ẩn popup
+            togglePopup();
+        });
+    }
+
+    // Hàm hiển thị và ẩn popup
+    function togglePopup() {
+        $('.view-cart').css('right', '120px');
+        setTimeout(function () {
+            $('.view-cart').css('right', '-300px');
+        }, 1000);
+    }
+
+    handleWishlistToggle('.product-item__action--wishlist', 'active');
+
+    // $('#add_to_cart-detail').click(function (e) {
+    //     e.preventDefault;
+    // });
 });
