@@ -12,24 +12,23 @@ $(document).ready(function ($) {
     });
 
     // Mở hoặc đóng giỏ hàng khi click vào '.cart-drop'
-    $('.cart-drop').click(function (e) {
+    $('.cart-drop, .add_to_cart-detail').click(function (e) {
         e.preventDefault();
-        $('.cart-sidebar').toggleClass('active');
-        $('.backdrop__body-backdrop___1rvky').toggleClass('active');
+        toggleCart();
     });
 
     // Đóng giỏ hàng khi click ra ngoài
     $(document).click(function (event) {
         // Kiểm tra nếu click không nằm trong #CartDrawer hoặc .cart-drop
-        if (!$(event.target).closest('#CartDrawer, .cart-drop').length) {
-            // Nếu giỏ hàng đang mở, đóng lại
-            if ($('#CartDrawer').hasClass('active')) {
-                $('#CartDrawer').removeClass('active');
-                $('.backdrop__body-backdrop___1rvky').removeClass('active');
-                $('.cart-drop').removeClass('active');
-            }
+        if (!$(event.target).closest('#CartDrawer, .cart-drop').length && $('#CartDrawer').hasClass('active')) {
+            toggleCart();
         }
     });
+
+    // Hàm đóng mở giỏ hàng và backdrop
+    function toggleCart() {
+        $('#CartDrawer, .backdrop__body-backdrop___1rvky').toggleClass('active');
+    }
 
     $('.plus-nClick1').click(function (e) {
         e.preventDefault();
@@ -362,7 +361,7 @@ $(document).ready(function () {
         });
     }
 
-    activeOption('.gallery-thumbnail-item', 'active'); // Kích hoạt chọn màu
+    // activeOption('.gallery-thumbnail-item', 'active'); // Kích hoạt chọn màu
 });
 
 $(document).ready(function () {
@@ -548,3 +547,7 @@ $(document).ready(function () {
     //     e.preventDefault;
     // });
 });
+
+export function test_module_include(mes) {
+    return mes;
+}

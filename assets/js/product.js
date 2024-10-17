@@ -1,3 +1,8 @@
+import { test_module_include } from './main.js';
+
+const greet_yash = test_module_include('test_yash');
+console.log(greet_yash + 'ppp');
+
 $(document).ready(function () {
     $('.gallery-top').slick({
         slidesToShow: 1,
@@ -6,7 +11,7 @@ $(document).ready(function () {
         dots: false,
         fade: true,
         infinite: false,
-        asNavFor: '.gallery-thumbs',
+        // asNavFor: '.gallery-thumbs',
         prevArrow:
             "<button type='button' class='slick-prev pull-left'><i class='fa-solid fa-chevron-left'></i></button>",
         nextArrow:
@@ -16,24 +21,33 @@ $(document).ready(function () {
     $('.gallery-thumbs').slick({
         slidesToShow: 5,
         slidesToScroll: 1,
-        asNavFor: '.gallery-top',
         arrows: true,
         dots: false,
         infinite: true,
-        focusOnSelect: true,
+        // asNavFor: '.gallery-top',
+        // focusOnSelect: true,
         prevArrow:
             "<button type='button' class='slick-prev pull-left'><i class='fa-solid fa-chevron-left'></i></button>",
         nextArrow:
             "<button type='button' class='slick-next pull-right'><i class='fa-solid fa-chevron-right'></i></button>",
     });
 
+    // Xử lý để làm thumbnail "active" khi ảnh chính thay đổi
     $('.gallery-top').on('afterChange', function (event, slick, currentSlide) {
-        // Xóa border khỏi tất cả các ảnh trong thumbnail
-        $('.gallery-thumbs .slick-slide img').css('border', 'none');
+        // Xóa class active khỏi tất cả thumbnail
+        $('.gallery-thumbnail-item').removeClass('active');
 
-        // Thêm border vào ảnh trong thumbnail tương ứng
-        $('.gallery-thumbs .slick-slide[data-slick-index="' + currentSlide + '"] img').css('border', '2px solid red'); // Thay đổi màu và độ dày của border theo ý muốn
+        // Thêm class active cho thumbnail tương ứng
+        $('.slick-slide[data-slick-index="' + currentSlide + '"] .gallery-thumbnail-item').addClass('active');
     });
+
+    // Khi click vào thumbnail, làm ảnh chính thay đổi
+    $('.gallery-thumbs .slick-slide').on('click', function () {
+        var index = $(this).data('slick-index');
+        $('.gallery-top').slick('slickGoTo', index); // Chuyển đến ảnh tương ứng
+    });
+
+    // ---------------------------------------------
 
     // Slider cho blog
     $('.similar-products').slick({
